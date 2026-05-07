@@ -1,0 +1,53 @@
+# Acceleration-Aware DeepSORT Configuration
+# All hyperparameters in one place for reproducibility.
+
+tracker:
+  # Which Kalman filter to use: "constant_velocity" (8D) or "constant_acceleration" (12D)
+  kalman_model: "constant_acceleration"
+
+  # Enable ECC camera-motion compensation
+  camera_motion_compensation: true
+
+  # Association thresholds
+  max_cosine_distance: 0.3      # Re-ID cosine distance gate
+  max_iou_distance: 0.7         # IoU fallback gate
+  nn_budget: 100                # Max gallery size per track
+
+  # Track lifecycle
+  max_age: 30                   # Frames before deleting unmatched track
+  n_init: 3                     # Hits before track is confirmed
+  tentative_max_age: 3          # Max age for tentative tracks
+
+kalman:
+  # Constant-velocity (8D baseline) noise parameters
+  cv:
+    std_weight_position: 1.0e-2
+    std_weight_velocity: 1.0e-5
+
+  # Constant-acceleration (12D) noise parameters
+  # Tuned for soccer's bursty dynamics: higher acceleration noise
+  # to trust measurements more during rapid direction changes.
+  ca:
+    std_weight_position: 1.0e-2
+    std_weight_velocity: 1.0e-5
+    std_weight_acceleration: 2.5e-2   # Key parameter: allows KF to absorb bursts
+
+camera_motion:
+  # ECC image registration parameters
+  method: "ecc_affine"          # "ecc_affine" or "ecc_euclidean"
+  warp_mode: "affine"           # cv2.MOTION_AFFINE
+  num_iterations: 50            # ECC max iterations
+  termination_eps: 1.0e-3       # ECC convergence threshold
+  downscale_factor: 2           # Process at half resolution for speed
+  gaussian_blur_sigma: 1.5      # Pre-blur to stabilize ECC
+
+detection:
+  # If using provided detections (MOTChallenge format), these are ignored.
+  # If running a live detector:
+  confidence_threshold: 0.5
+  nms_max_overlap: 1.0
+
+evaluation:
+  # Regime analysis thresholds
+  acceleration_threshold: 15.0  # px/frame^2 — velocity change to flag as "accel event"
+  camera_pan_threshold: 5.0     # px — affine translation magnitude for "pan event"

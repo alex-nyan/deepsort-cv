@@ -1,0 +1,9 @@
+numpy>=1.24
+scipy>=1.10
+opencv-python>=4.8
+torch>=2.0
+torchvision>=0.15
+motmetrics>=1.4
+PyYAML>=6.0
+tqdm>=4.65
+filterpy>=1.4

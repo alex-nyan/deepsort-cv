@@ -30,8 +30,12 @@ accel-deepsort/
 │   └── defaults.yaml               # All hyperparameters
 ├── scripts/
 │   ├── run_tracker.py              # Main entry point
-│   └── run_ablation.py             # Four-way ablation driver
+│   ├── run_ablation.py             # Four-way ablation driver (with regime analysis)
+│   ├── run_botsort_baseline.py     # YOLOv8 + BoT-SORT external baseline
+│   ├── run_full_evaluation.py      # Complete evaluation pipeline
+│   └── evaluate_prediction.py      # KF prediction accuracy vs true future
 ├── tools/
+│   ├── generate_detections.py      # YOLOv8 detection generation
 │   ├── convert_soccernet.py        # SoccerNet → MOTChallenge format
 │   └── convert_sportsmot.py        # SportsMOT → MOTChallenge format
 └── requirements.txt
@@ -54,10 +58,22 @@ Both must be converted to MOTChallenge format using scripts in `tools/`.
 
 ```bash
 # Run single configuration
-python scripts/run_tracker.py --config configs/defaults.yaml --sequence <path>
+python scripts/run_tracker.py --config configs/defaults.yaml --sequence <path> --output <path>
 
 # Run four-way ablation
 python scripts/run_ablation.py --config configs/defaults.yaml --data_root <path>
+
+# Run YOLOv8 + BoT-SORT baseline for comparison
+python scripts/run_botsort_baseline.py --data_root <path> --model yolov8x.pt
+
+# Evaluate prediction accuracy (CV vs CA Kalman filter)
+python scripts/evaluate_prediction.py --gt_file <path/to/gt.txt>
+
+# Run full evaluation pipeline (ablation + BoT-SORT + prediction)
+python scripts/run_full_evaluation.py --config configs/defaults.yaml --data_root <path>
+
+# Generate detections with YOLOv8
+python tools/generate_detections.py --data_root <path> --model yolov8x.pt
 ```
 
 ## Ablation Configurations
