@@ -1,6 +1,9 @@
 # Virtual environment
 .venv/
-
+soccernet_data
+soccer 
+soccer_test_small
+sportsmot_publish
 # SoccerNet data
 soccernet_data/
 
