@@ -14,7 +14,6 @@ Usage:
 import argparse
 import json
 import os
-import shutil
 
 
 def convert_sequence(annotation_file, image_dir, output_dir):

@@ -30,7 +30,7 @@ import yaml
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from scripts.run_tracker import run_tracker
-from evaluation.mot_metrics import evaluate_sequence, evaluate_dataset
+from evaluation.mot_metrics import evaluate_sequence
 from evaluation.regime_analysis import (
     detect_acceleration_events,
     detect_camera_pan_events,
@@ -268,11 +268,14 @@ def run_ablation(config, data_root, output_dir, reid_model=None):
         if not results:
             continue
 
-        total_ids = sum(r["metrics"]["IDS"] for r in results.values() if "metrics" in r)
-        total_fp = sum(r["metrics"]["FP"] for r in results.values() if "metrics" in r)
-        total_fn = sum(r["metrics"]["FN"] for r in results.values() if "metrics" in r)
-        avg_mota = sum(r["metrics"]["MOTA"] for r in results.values() if "metrics" in r) / len(results)
-        avg_idf1 = sum(r["metrics"]["IDF1"] for r in results.values() if "metrics" in r) / len(results)
+        evaluated = [r for r in results.values() if "metrics" in r]
+        if not evaluated:
+            continue
+        total_ids = sum(r["metrics"]["IDS"] for r in evaluated)
+        total_fp = sum(r["metrics"]["FP"] for r in evaluated)
+        total_fn = sum(r["metrics"]["FN"] for r in evaluated)
+        avg_mota = sum(r["metrics"]["MOTA"] for r in evaluated) / len(evaluated)
+        avg_idf1 = sum(r["metrics"]["IDF1"] for r in evaluated) / len(evaluated)
 
         print(f"{config_name:<16}{avg_mota:>10.4f}{avg_idf1:>10.4f}"
               f"{total_ids:>10}{total_fp:>10}{total_fn:>10}")

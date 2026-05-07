@@ -35,8 +35,6 @@ class Track:
         Initial Re-ID feature.
     """
 
-    _count = 0
-
     def __init__(self, mean, covariance, track_id, n_init, max_age, feature=None):
         self.mean = mean
         self.covariance = covariance

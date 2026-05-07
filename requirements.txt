@@ -3,6 +3,7 @@ scipy>=1.10
 opencv-python>=4.8
 torch>=2.0
 torchvision>=0.15
+ultralytics>=8.0
 motmetrics>=1.4
 PyYAML>=6.0
 tqdm>=4.65

@@ -97,8 +97,6 @@ def evaluate_prediction(gt_file, prediction_horizons=(1, 5, 10, 15, 20),
         if len(observations) < min_history + max_horizon:
             continue
 
-        # Build frame->measurement lookup for this track
-        frame_to_obs = {obs[0]: obs[1:] for obs in observations}
         frames = [obs[0] for obs in observations]
 
         # Test prediction at regular intervals along the track

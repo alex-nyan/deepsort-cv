@@ -25,7 +25,7 @@ import yaml
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from scripts.run_ablation import run_ablation, ABLATION_CONFIGS
+from scripts.run_ablation import run_ablation
 from scripts.run_botsort_baseline import run_botsort_on_sequence
 from scripts.evaluate_prediction import evaluate_prediction, print_results
 from evaluation.mot_metrics import evaluate_sequence

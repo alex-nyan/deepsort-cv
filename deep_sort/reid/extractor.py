@@ -2,13 +2,11 @@
 Re-ID feature extractor.
 
 Extracts appearance embeddings from detected bounding boxes using a
-pre-trained CNN. The standard DeepSORT uses a model trained on the
-Mars pedestrian re-identification dataset.
+pre-trained CNN.
 
-For this project, we support:
-    1. Loading a pre-trained .t7 or .pth Re-ID model
-    2. Using torchvision ResNet-based feature extraction as fallback
-    3. Dummy features for ablation (isolating motion-only effects)
+Supported modes:
+    1. "resnet" — torchvision ResNet18-based extraction (requires .pth weights)
+    2. "dummy" — zero-vectors for motion-only ablation
 """
 
 import numpy as np
@@ -101,6 +99,7 @@ class ResNetExtractor:
                 crop = np.zeros((128, 64, 3), dtype=np.uint8)
             else:
                 crop = image[y1:y2, x1:x2]
+                crop = crop[:, :, ::-1]  # BGR -> RGB
 
             crops.append(self.transform(crop))
 
@@ -121,7 +120,7 @@ def build_extractor(extractor_type="resnet", model_path=None, device=None):
     Parameters
     ----------
     extractor_type : str
-        "resnet", "dummy", or "custom"
+        "resnet" or "dummy"
     model_path : str | None
     device : str | None
 

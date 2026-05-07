@@ -52,7 +52,9 @@ def non_max_suppression(boxes, max_bbox_overlap, scores=None):
 
         w = np.maximum(0, xx2 - xx1)
         h = np.maximum(0, yy2 - yy1)
-        overlap = (w * h) / (area[idxs[:last]] + 1e-12)
+        intersection = w * h
+        union = area[i] + area[idxs[:last]] - intersection
+        overlap = intersection / (union + 1e-12)
 
         idxs = np.delete(idxs, np.concatenate(
             ([last], np.where(overlap > max_bbox_overlap)[0])

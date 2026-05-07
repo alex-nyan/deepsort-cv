@@ -14,7 +14,6 @@ Writes det/det.txt into each sequence folder, in the format:
 import argparse
 import os
 
-import numpy as np
 from tqdm import tqdm
 from ultralytics import YOLO
 
