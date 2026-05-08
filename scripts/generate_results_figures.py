@@ -140,7 +140,7 @@ def main():
         ax.set_title(title)
         ax.legend(loc="lower right", fontsize=9)
 
-    plot_metrics(axes[0], soccer, "SportsMOT soccer (train + val, n=30 seq)")
+    plot_metrics(axes[0], soccer, "SportsMOT soccer (n=30 seq)")
     plot_metrics(axes[1], soccernet, "SoccerNet tracking train (n=57 seq)")
     fig.suptitle("Four-way ablation: mean MOTA & IDF1 per sequence (±95% CI)", y=1.02)
     fig.savefig(OUT_DIR / "fig1_ablation_mota_idf1.png")
