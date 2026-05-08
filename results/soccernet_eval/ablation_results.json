@@ -1,0 +1,4342 @@
+{
+  "baseline": {
+    "train_SNMOT-060": {
+      "metrics": {
+        "MOTA": 0.8491137370753323,
+        "IDF1": 0.43511182233324225,
+        "IDS": 488,
+        "FP": 48,
+        "FN": 1507,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 482
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-061": {
+      "metrics": {
+        "MOTA": 0.890159978550362,
+        "IDF1": 0.47262731211852954,
+        "IDS": 238,
+        "FP": 38,
+        "FN": 953,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 235
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-062": {
+      "metrics": {
+        "MOTA": 0.9370843607561832,
+        "IDF1": 0.5661256444529311,
+        "IDS": 213,
+        "FP": 24,
+        "FN": 605,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 212
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-063": {
+      "metrics": {
+        "MOTA": 0.8434099648204205,
+        "IDF1": 0.36881091617933726,
+        "IDS": 445,
+        "FP": 54,
+        "FN": 1415,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 443
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-064": {
+      "metrics": {
+        "MOTA": 0.9259167950693374,
+        "IDF1": 0.5312777003925542,
+        "IDS": 296,
+        "FP": 22,
+        "FN": 884,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 272
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-065": {
+      "metrics": {
+        "MOTA": 0.8851716581446312,
+        "IDF1": 0.4311636930802298,
+        "IDS": 411,
+        "FP": 34,
+        "FN": 1127,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 404
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-066": {
+      "metrics": {
+        "MOTA": 0.8944493839705322,
+        "IDF1": 0.38717999603095854,
+        "IDS": 344,
+        "FP": 30,
+        "FN": 1288,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 312
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-067": {
+      "metrics": {
+        "MOTA": 0.8716330822986634,
+        "IDF1": 0.41364590373874993,
+        "IDS": 401,
+        "FP": 62,
+        "FN": 1429,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 383
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-068": {
+      "metrics": {
+        "MOTA": 0.9257987458942968,
+        "IDF1": 0.6232333678042055,
+        "IDS": 243,
+        "FP": 34,
+        "FN": 717,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 243
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-069": {
+      "metrics": {
+        "MOTA": 0.9629716245712504,
+        "IDF1": 0.7515988945913936,
+        "IDS": 109,
+        "FP": 20,
+        "FN": 346,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 108
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-070": {
+      "metrics": {
+        "MOTA": 0.8454080733298078,
+        "IDF1": 0.516669770907059,
+        "IDS": 464,
+        "FP": 37,
+        "FN": 1253,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 452
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-071": {
+      "metrics": {
+        "MOTA": 0.9292094387415011,
+        "IDF1": 0.5369255366193829,
+        "IDS": 179,
+        "FP": 138,
+        "FN": 745,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 155
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-072": {
+      "metrics": {
+        "MOTA": 0.9531549490147972,
+        "IDF1": 0.6316528248918002,
+        "IDS": 130,
+        "FP": 21,
+        "FN": 460,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 125
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-073": {
+      "metrics": {
+        "MOTA": 0.8698045303789429,
+        "IDF1": 0.4800029543188449,
+        "IDS": 334,
+        "FP": 124,
+        "FN": 1387,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 321
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-074": {
+      "metrics": {
+        "MOTA": 0.9161619984859954,
+        "IDF1": 0.5322329087600728,
+        "IDS": 371,
+        "FP": 15,
+        "FN": 943,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 365
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-075": {
+      "metrics": {
+        "MOTA": 0.9535780701150217,
+        "IDF1": 0.5609764627706082,
+        "IDS": 163,
+        "FP": 33,
+        "FN": 478,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 147
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-076": {
+      "metrics": {
+        "MOTA": 0.9723662408466514,
+        "IDF1": 0.9037360976136486,
+        "IDS": 125,
+        "FP": 9,
+        "FN": 383,
+        "MT": 28,
+        "ML": 0,
+        "Frag": 125
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-077": {
+      "metrics": {
+        "MOTA": 0.9561002631214514,
+        "IDF1": 0.7264987334646777,
+        "IDS": 148,
+        "FP": 13,
+        "FN": 473,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 145
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-097": {
+      "metrics": {
+        "MOTA": 0.9502026184538653,
+        "IDF1": 0.7555802243983666,
+        "IDS": 124,
+        "FP": 37,
+        "FN": 478,
+        "MT": 20,
+        "ML": 0,
+        "Frag": 119
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-098": {
+      "metrics": {
+        "MOTA": 0.9138914825189335,
+        "IDF1": 0.6565122120677677,
+        "IDS": 209,
+        "FP": 27,
+        "FN": 594,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 208
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-099": {
+      "metrics": {
+        "MOTA": 0.9140685142417244,
+        "IDF1": 0.6220124223602485,
+        "IDS": 198,
+        "FP": 18,
+        "FN": 677,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 188
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-100": {
+      "metrics": {
+        "MOTA": 0.938053767512306,
+        "IDF1": 0.6891865807049377,
+        "IDS": 227,
+        "FP": 42,
+        "FN": 549,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 215
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-101": {
+      "metrics": {
+        "MOTA": 0.7911486255275465,
+        "IDF1": 0.5175024826216484,
+        "IDS": 337,
+        "FP": 36,
+        "FN": 1458,
+        "MT": 18,
+        "ML": 0,
+        "Frag": 331
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-102": {
+      "metrics": {
+        "MOTA": 0.9170698518294527,
+        "IDF1": 0.5461202866936741,
+        "IDS": 245,
+        "FP": 34,
+        "FN": 818,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 239
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-103": {
+      "metrics": {
+        "MOTA": 0.9194340734918451,
+        "IDF1": 0.5614318395909029,
+        "IDS": 222,
+        "FP": 99,
+        "FN": 909,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 206
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-104": {
+      "metrics": {
+        "MOTA": 0.9409084727322181,
+        "IDF1": 0.5547976037951453,
+        "IDS": 234,
+        "FP": 51,
+        "FN": 584,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 219
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-105": {
+      "metrics": {
+        "MOTA": 0.8823079862437906,
+        "IDF1": 0.45659035518798197,
+        "IDS": 331,
+        "FP": 34,
+        "FN": 1175,
+        "MT": 22,
+        "ML": 1,
+        "Frag": 320
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-106": {
+      "metrics": {
+        "MOTA": 0.9275951838594207,
+        "IDF1": 0.6115517169787817,
+        "IDS": 225,
+        "FP": 82,
+        "FN": 583,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 210
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-107": {
+      "metrics": {
+        "MOTA": 0.8712115185744969,
+        "IDF1": 0.5179219695389109,
+        "IDS": 344,
+        "FP": 49,
+        "FN": 1226,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 336
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-108": {
+      "metrics": {
+        "MOTA": 0.842549786628734,
+        "IDF1": 0.5511967143464098,
+        "IDS": 376,
+        "FP": 41,
+        "FN": 1354,
+        "MT": 18,
+        "ML": 0,
+        "Frag": 361
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-109": {
+      "metrics": {
+        "MOTA": 0.9037565521258009,
+        "IDF1": 0.48184001200660365,
+        "IDS": 386,
+        "FP": 58,
+        "FN": 878,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 354
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-110": {
+      "metrics": {
+        "MOTA": 0.8769092542677448,
+        "IDF1": 0.402316722382026,
+        "IDS": 436,
+        "FP": 111,
+        "FN": 1097,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 388
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-111": {
+      "metrics": {
+        "MOTA": 0.9317546312478154,
+        "IDF1": 0.6967194822584245,
+        "IDS": 238,
+        "FP": 30,
+        "FN": 513,
+        "MT": 26,
+        "ML": 0,
+        "Frag": 227
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-112": {
+      "metrics": {
+        "MOTA": 0.8724662162162162,
+        "IDF1": 0.6364718853362734,
+        "IDS": 317,
+        "FP": 94,
+        "FN": 1099,
+        "MT": 23,
+        "ML": 1,
+        "Frag": 311
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-113": {
+      "metrics": {
+        "MOTA": 0.942766497461929,
+        "IDF1": 0.7515865820489573,
+        "IDS": 234,
+        "FP": 16,
+        "FN": 652,
+        "MT": 30,
+        "ML": 0,
+        "Frag": 231
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-114": {
+      "metrics": {
+        "MOTA": 0.8890009073495312,
+        "IDF1": 0.662613981762918,
+        "IDS": 289,
+        "FP": 28,
+        "FN": 784,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 281
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-115": {
+      "metrics": {
+        "MOTA": 0.9207905739262637,
+        "IDF1": 0.529205060128065,
+        "IDS": 294,
+        "FP": 25,
+        "FN": 723,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 279
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-151": {
+      "metrics": {
+        "MOTA": 0.8722943722943723,
+        "IDF1": 0.5169609204522913,
+        "IDS": 237,
+        "FP": 16,
+        "FN": 1104,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 235
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-152": {
+      "metrics": {
+        "MOTA": 0.9711598746081505,
+        "IDF1": 0.7619861388018608,
+        "IDS": 81,
+        "FP": 39,
+        "FN": 340,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 71
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-153": {
+      "metrics": {
+        "MOTA": 0.846810199424546,
+        "IDF1": 0.5448399704235767,
+        "IDS": 272,
+        "FP": 24,
+        "FN": 1248,
+        "MT": 25,
+        "ML": 1,
+        "Frag": 270
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-154": {
+      "metrics": {
+        "MOTA": 0.8173691916467596,
+        "IDF1": 0.4184623019976012,
+        "IDS": 455,
+        "FP": 70,
+        "FN": 1845,
+        "MT": 19,
+        "ML": 0,
+        "Frag": 440
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-155": {
+      "metrics": {
+        "MOTA": 0.9093048515568428,
+        "IDF1": 0.600215164413677,
+        "IDS": 233,
+        "FP": 26,
+        "FN": 743,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 227
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-156": {
+      "metrics": {
+        "MOTA": 0.9538026398491515,
+        "IDF1": 0.6186849555404921,
+        "IDS": 171,
+        "FP": 20,
+        "FN": 397,
+        "MT": 21,
+        "ML": 1,
+        "Frag": 156
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-157": {
+      "metrics": {
+        "MOTA": 0.8313702958919851,
+        "IDF1": 0.47013507267217913,
+        "IDS": 300,
+        "FP": 23,
+        "FN": 1438,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 292
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-158": {
+      "metrics": {
+        "MOTA": 0.8268467787644058,
+        "IDF1": 0.5480813098798601,
+        "IDS": 328,
+        "FP": 30,
+        "FN": 1475,
+        "MT": 20,
+        "ML": 0,
+        "Frag": 325
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-159": {
+      "metrics": {
+        "MOTA": 0.7967330677290837,
+        "IDF1": 0.3853734439834025,
+        "IDS": 535,
+        "FP": 26,
+        "FN": 1990,
+        "MT": 19,
+        "ML": 0,
+        "Frag": 522
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-160": {
+      "metrics": {
+        "MOTA": 0.8275572162540868,
+        "IDF1": 0.49934902353530297,
+        "IDS": 356,
+        "FP": 25,
+        "FN": 1465,
+        "MT": 20,
+        "ML": 0,
+        "Frag": 355
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-161": {
+      "metrics": {
+        "MOTA": 0.879485072582854,
+        "IDF1": 0.6510695187165776,
+        "IDS": 284,
+        "FP": 37,
+        "FN": 999,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 284
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-162": {
+      "metrics": {
+        "MOTA": 0.8053562180957313,
+        "IDF1": 0.3534225894879027,
+        "IDS": 556,
+        "FP": 106,
+        "FN": 1969,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 525
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-163": {
+      "metrics": {
+        "MOTA": 0.7960520072126791,
+        "IDF1": 0.46621132153575495,
+        "IDS": 363,
+        "FP": 19,
+        "FN": 1767,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 345
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-164": {
+      "metrics": {
+        "MOTA": 0.8796894274726073,
+        "IDF1": 0.41571244407370894,
+        "IDS": 374,
+        "FP": 48,
+        "FN": 1236,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 369
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-165": {
+      "metrics": {
+        "MOTA": 0.9186984815618221,
+        "IDF1": 0.7169709989258861,
+        "IDS": 179,
+        "FP": 26,
+        "FN": 732,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 167
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-166": {
+      "metrics": {
+        "MOTA": 0.920340120832401,
+        "IDF1": 0.7941425167191944,
+        "IDS": 204,
+        "FP": 34,
+        "FN": 830,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 203
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-167": {
+      "metrics": {
+        "MOTA": 0.889353141442278,
+        "IDF1": 0.3832407631007003,
+        "IDS": 320,
+        "FP": 54,
+        "FN": 1056,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 307
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-168": {
+      "metrics": {
+        "MOTA": 0.9252831832704037,
+        "IDF1": 0.5062875480428374,
+        "IDS": 254,
+        "FP": 15,
+        "FN": 760,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 247
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-169": {
+      "metrics": {
+        "MOTA": 0.8272634445200817,
+        "IDF1": 0.3981867633726201,
+        "IDS": 358,
+        "FP": 114,
+        "FN": 1558,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 348
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    },
+    "train_SNMOT-170": {
+      "metrics": {
+        "MOTA": 0.8806984277474915,
+        "IDF1": 0.5627256504959124,
+        "IDS": 241,
+        "FP": 26,
+        "FN": 1243,
+        "MT": 18,
+        "ML": 0,
+        "Frag": 229
+      },
+      "regime": {
+        "accel_only": 14054,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 2415,
+        "total": 16469
+      }
+    }
+  },
+  "accel_only": {
+    "train_SNMOT-060": {
+      "metrics": {
+        "MOTA": 0.8953471196454948,
+        "IDF1": 0.5401966454598034,
+        "IDS": 202,
+        "FP": 35,
+        "FN": 1180,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 197
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-061": {
+      "metrics": {
+        "MOTA": 0.9234962910000893,
+        "IDF1": 0.5538589288185635,
+        "IDS": 103,
+        "FP": 26,
+        "FN": 727,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 103
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-062": {
+      "metrics": {
+        "MOTA": 0.9573339311066278,
+        "IDF1": 0.6994984040127679,
+        "IDS": 81,
+        "FP": 20,
+        "FN": 470,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 81
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-063": {
+      "metrics": {
+        "MOTA": 0.885052769369222,
+        "IDF1": 0.4708456686832282,
+        "IDS": 186,
+        "FP": 40,
+        "FN": 1179,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 177
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-064": {
+      "metrics": {
+        "MOTA": 0.94557781201849,
+        "IDF1": 0.5498266624645446,
+        "IDS": 141,
+        "FP": 11,
+        "FN": 731,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 135
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-065": {
+      "metrics": {
+        "MOTA": 0.9216946676406136,
+        "IDF1": 0.5354431813890252,
+        "IDS": 127,
+        "FP": 22,
+        "FN": 923,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 125
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-066": {
+      "metrics": {
+        "MOTA": 0.9214403658071891,
+        "IDF1": 0.49614083489342137,
+        "IDS": 158,
+        "FP": 17,
+        "FN": 1062,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 150
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-067": {
+      "metrics": {
+        "MOTA": 0.9098989076599497,
+        "IDF1": 0.49738127877957045,
+        "IDS": 201,
+        "FP": 49,
+        "FN": 1078,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 184
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-068": {
+      "metrics": {
+        "MOTA": 0.9349059420722604,
+        "IDF1": 0.6828053778680048,
+        "IDS": 125,
+        "FP": 31,
+        "FN": 716,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 125
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-069": {
+      "metrics": {
+        "MOTA": 0.9702213907078266,
+        "IDF1": 0.801844044288585,
+        "IDS": 65,
+        "FP": 20,
+        "FN": 297,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 66
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-070": {
+      "metrics": {
+        "MOTA": 0.8886832363828662,
+        "IDF1": 0.5962417470797359,
+        "IDS": 188,
+        "FP": 21,
+        "FN": 1054,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 187
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-071": {
+      "metrics": {
+        "MOTA": 0.9301426476469804,
+        "IDF1": 0.5906774478494259,
+        "IDS": 154,
+        "FP": 162,
+        "FN": 732,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 136
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-072": {
+      "metrics": {
+        "MOTA": 0.9599785325461934,
+        "IDF1": 0.7600467289719626,
+        "IDS": 90,
+        "FP": 13,
+        "FN": 419,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 89
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-073": {
+      "metrics": {
+        "MOTA": 0.8979606238091877,
+        "IDF1": 0.5555596533284161,
+        "IDS": 181,
+        "FP": 19,
+        "FN": 1246,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 176
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-074": {
+      "metrics": {
+        "MOTA": 0.9242997728993188,
+        "IDF1": 0.5752264286179709,
+        "IDS": 162,
+        "FP": 14,
+        "FN": 1024,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 156
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-075": {
+      "metrics": {
+        "MOTA": 0.9606033473379709,
+        "IDF1": 0.6385668389439866,
+        "IDS": 92,
+        "FP": 39,
+        "FN": 441,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 75
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-076": {
+      "metrics": {
+        "MOTA": 0.9769095087925598,
+        "IDF1": 0.9298321368813084,
+        "IDS": 52,
+        "FP": 8,
+        "FN": 372,
+        "MT": 28,
+        "ML": 0,
+        "Frag": 51
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-077": {
+      "metrics": {
+        "MOTA": 0.9669020911231131,
+        "IDF1": 0.7910028773949049,
+        "IDS": 82,
+        "FP": 5,
+        "FN": 391,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 82
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-097": {
+      "metrics": {
+        "MOTA": 0.9628273067331671,
+        "IDF1": 0.830258739877543,
+        "IDS": 78,
+        "FP": 25,
+        "FN": 374,
+        "MT": 20,
+        "ML": 0,
+        "Frag": 75
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-098": {
+      "metrics": {
+        "MOTA": 0.9400352733686067,
+        "IDF1": 0.7268867423840356,
+        "IDS": 94,
+        "FP": 24,
+        "FN": 460,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 94
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-099": {
+      "metrics": {
+        "MOTA": 0.9154157043879908,
+        "IDF1": 0.6567164179104478,
+        "IDS": 169,
+        "FP": 13,
+        "FN": 697,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 165
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-100": {
+      "metrics": {
+        "MOTA": 0.9591063990912533,
+        "IDF1": 0.7297183044464086,
+        "IDS": 99,
+        "FP": 26,
+        "FN": 415,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 93
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-101": {
+      "metrics": {
+        "MOTA": 0.8374586517622904,
+        "IDF1": 0.6549485546300833,
+        "IDS": 169,
+        "FP": 25,
+        "FN": 1231,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 165
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-102": {
+      "metrics": {
+        "MOTA": 0.9443604475355307,
+        "IDF1": 0.6301878043125435,
+        "IDS": 110,
+        "FP": 24,
+        "FN": 602,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 107
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-103": {
+      "metrics": {
+        "MOTA": 0.9456343747953101,
+        "IDF1": 0.651645518765275,
+        "IDS": 105,
+        "FP": 30,
+        "FN": 695,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 101
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-104": {
+      "metrics": {
+        "MOTA": 0.964436284509724,
+        "IDF1": 0.7166206896551724,
+        "IDS": 79,
+        "FP": 16,
+        "FN": 428,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 76
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-105": {
+      "metrics": {
+        "MOTA": 0.8882690103171571,
+        "IDF1": 0.5154746632456703,
+        "IDS": 202,
+        "FP": 17,
+        "FN": 1243,
+        "MT": 21,
+        "ML": 1,
+        "Frag": 199
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-106": {
+      "metrics": {
+        "MOTA": 0.9288154897494305,
+        "IDF1": 0.6251197667152677,
+        "IDS": 230,
+        "FP": 33,
+        "FN": 612,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 199
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-107": {
+      "metrics": {
+        "MOTA": 0.8981783469891019,
+        "IDF1": 0.6230826631290938,
+        "IDS": 206,
+        "FP": 27,
+        "FN": 1047,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 206
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-108": {
+      "metrics": {
+        "MOTA": 0.8690433854907539,
+        "IDF1": 0.659629368988975,
+        "IDS": 242,
+        "FP": 25,
+        "FN": 1206,
+        "MT": 18,
+        "ML": 0,
+        "Frag": 234
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-109": {
+      "metrics": {
+        "MOTA": 0.9213016889924287,
+        "IDF1": 0.5175107456550178,
+        "IDS": 268,
+        "FP": 48,
+        "FN": 765,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 251
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-110": {
+      "metrics": {
+        "MOTA": 0.9060347409404013,
+        "IDF1": 0.5020693923335783,
+        "IDS": 274,
+        "FP": 61,
+        "FN": 920,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 243
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-111": {
+      "metrics": {
+        "MOTA": 0.9480076896190144,
+        "IDF1": 0.7866239202066079,
+        "IDS": 113,
+        "FP": 26,
+        "FN": 456,
+        "MT": 26,
+        "ML": 0,
+        "Frag": 110
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-112": {
+      "metrics": {
+        "MOTA": 0.9309121621621621,
+        "IDF1": 0.7087311230689116,
+        "IDS": 134,
+        "FP": 24,
+        "FN": 660,
+        "MT": 24,
+        "ML": 1,
+        "Frag": 134
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-113": {
+      "metrics": {
+        "MOTA": 0.9601522842639594,
+        "IDF1": 0.8525552152184427,
+        "IDS": 89,
+        "FP": 17,
+        "FN": 522,
+        "MT": 29,
+        "ML": 0,
+        "Frag": 89
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-114": {
+      "metrics": {
+        "MOTA": 0.89484827099506,
+        "IDF1": 0.6942200776250917,
+        "IDS": 229,
+        "FP": 21,
+        "FN": 793,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 221
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-115": {
+      "metrics": {
+        "MOTA": 0.9368301026225769,
+        "IDF1": 0.5735093663589983,
+        "IDS": 136,
+        "FP": 31,
+        "FN": 664,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 126
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-151": {
+      "metrics": {
+        "MOTA": 0.8923395445134575,
+        "IDF1": 0.5836330492190964,
+        "IDS": 167,
+        "FP": 11,
+        "FN": 966,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 165
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-152": {
+      "metrics": {
+        "MOTA": 0.979435736677116,
+        "IDF1": 0.8982289690069576,
+        "IDS": 20,
+        "FP": 14,
+        "FN": 294,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 19
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-153": {
+      "metrics": {
+        "MOTA": 0.8696299236035321,
+        "IDF1": 0.6131639722863741,
+        "IDS": 174,
+        "FP": 17,
+        "FN": 1123,
+        "MT": 24,
+        "ML": 1,
+        "Frag": 174
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-154": {
+      "metrics": {
+        "MOTA": 0.8567465515912769,
+        "IDF1": 0.4370958500450192,
+        "IDS": 273,
+        "FP": 33,
+        "FN": 1553,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 256
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-155": {
+      "metrics": {
+        "MOTA": 0.9191708906589428,
+        "IDF1": 0.6577187485385587,
+        "IDS": 136,
+        "FP": 22,
+        "FN": 735,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 134
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-156": {
+      "metrics": {
+        "MOTA": 0.9571810182275299,
+        "IDF1": 0.6995290173225832,
+        "IDS": 109,
+        "FP": 17,
+        "FN": 419,
+        "MT": 21,
+        "ML": 1,
+        "Frag": 88
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-157": {
+      "metrics": {
+        "MOTA": 0.8608637364741932,
+        "IDF1": 0.49023090586145646,
+        "IDS": 236,
+        "FP": 18,
+        "FN": 1199,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 234
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-158": {
+      "metrics": {
+        "MOTA": 0.8721896844889476,
+        "IDF1": 0.5568545163868905,
+        "IDS": 163,
+        "FP": 17,
+        "FN": 1173,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 159
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-159": {
+      "metrics": {
+        "MOTA": 0.8521912350597609,
+        "IDF1": 0.4685903983656793,
+        "IDS": 207,
+        "FP": 22,
+        "FN": 1626,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 204
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-160": {
+      "metrics": {
+        "MOTA": 0.8851004203643158,
+        "IDF1": 0.5763377515954835,
+        "IDS": 158,
+        "FP": 16,
+        "FN": 1056,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 158
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-161": {
+      "metrics": {
+        "MOTA": 0.9114397881858851,
+        "IDF1": 0.6630646002180198,
+        "IDS": 117,
+        "FP": 23,
+        "FN": 830,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 117
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-162": {
+      "metrics": {
+        "MOTA": 0.8333210031811793,
+        "IDF1": 0.3926463013590079,
+        "IDS": 388,
+        "FP": 35,
+        "FN": 1830,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 372
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-163": {
+      "metrics": {
+        "MOTA": 0.846066242763595,
+        "IDF1": 0.5267811769488769,
+        "IDS": 180,
+        "FP": 23,
+        "FN": 1419,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 171
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-164": {
+      "metrics": {
+        "MOTA": 0.9191640664683259,
+        "IDF1": 0.5023430178069354,
+        "IDS": 197,
+        "FP": 15,
+        "FN": 902,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 194
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-165": {
+      "metrics": {
+        "MOTA": 0.9320607375271149,
+        "IDF1": 0.8124776865405212,
+        "IDS": 95,
+        "FP": 23,
+        "FN": 665,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 91
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-166": {
+      "metrics": {
+        "MOTA": 0.942865667188782,
+        "IDF1": 0.8054654402503721,
+        "IDS": 103,
+        "FP": 25,
+        "FN": 638,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 103
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-167": {
+      "metrics": {
+        "MOTA": 0.9151191581553698,
+        "IDF1": 0.46950314793279063,
+        "IDS": 172,
+        "FP": 7,
+        "FN": 918,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 160
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-168": {
+      "metrics": {
+        "MOTA": 0.9479378449027012,
+        "IDF1": 0.6240693410378931,
+        "IDS": 148,
+        "FP": 11,
+        "FN": 558,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 145
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-169": {
+      "metrics": {
+        "MOTA": 0.8745745405037441,
+        "IDF1": 0.48468492781001216,
+        "IDS": 167,
+        "FP": 18,
+        "FN": 1289,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 162
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    },
+    "train_SNMOT-170": {
+      "metrics": {
+        "MOTA": 0.9023465276131785,
+        "IDF1": 0.6537669822972416,
+        "IDS": 188,
+        "FP": 12,
+        "FN": 1036,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 183
+      },
+      "regime": {
+        "accel_only": 7479,
+        "pan_only": 0,
+        "both": 0,
+        "neither": 1335,
+        "total": 8814
+      }
+    }
+  },
+  "cmc_only": {
+    "train_SNMOT-060": {
+      "metrics": {
+        "MOTA": 0.9404726735598228,
+        "IDF1": 0.7617245164464969,
+        "IDS": 69,
+        "FP": 38,
+        "FN": 699,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 68
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-061": {
+      "metrics": {
+        "MOTA": 0.9294843149521852,
+        "IDF1": 0.6948365442089292,
+        "IDS": 94,
+        "FP": 33,
+        "FN": 662,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 91
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-062": {
+      "metrics": {
+        "MOTA": 0.9598744676081596,
+        "IDF1": 0.8471383540313698,
+        "IDS": 50,
+        "FP": 26,
+        "FN": 461,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 49
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-063": {
+      "metrics": {
+        "MOTA": 0.9314407264992228,
+        "IDF1": 0.640719569603228,
+        "IDS": 88,
+        "FP": 48,
+        "FN": 702,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 88
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-064": {
+      "metrics": {
+        "MOTA": 0.9759013867488444,
+        "IDF1": 0.6891017666086091,
+        "IDS": 71,
+        "FP": 11,
+        "FN": 309,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 64
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-065": {
+      "metrics": {
+        "MOTA": 0.9589481373265157,
+        "IDF1": 0.6922362900530947,
+        "IDS": 45,
+        "FP": 35,
+        "FN": 482,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 44
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-066": {
+      "metrics": {
+        "MOTA": 0.9507811507684492,
+        "IDF1": 0.587958030669895,
+        "IDS": 116,
+        "FP": 71,
+        "FN": 588,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 112
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-067": {
+      "metrics": {
+        "MOTA": 0.9590202863152182,
+        "IDF1": 0.7456820767400972,
+        "IDS": 87,
+        "FP": 23,
+        "FN": 494,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 85
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-068": {
+      "metrics": {
+        "MOTA": 0.9522245446401911,
+        "IDF1": 0.8064982498858622,
+        "IDS": 68,
+        "FP": 32,
+        "FN": 540,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 67
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-069": {
+      "metrics": {
+        "MOTA": 0.9646086685375741,
+        "IDF1": 0.8600798639939904,
+        "IDS": 65,
+        "FP": 13,
+        "FN": 376,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 65
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-070": {
+      "metrics": {
+        "MOTA": 0.9353957341794465,
+        "IDF1": 0.6886920365181235,
+        "IDS": 111,
+        "FP": 28,
+        "FN": 594,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 109
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-071": {
+      "metrics": {
+        "MOTA": 0.9618717504332756,
+        "IDF1": 0.6689212039228948,
+        "IDS": 74,
+        "FP": 32,
+        "FN": 466,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 63
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-072": {
+      "metrics": {
+        "MOTA": 0.9517748984129418,
+        "IDF1": 0.8299378250498572,
+        "IDS": 62,
+        "FP": 27,
+        "FN": 540,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 62
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-073": {
+      "metrics": {
+        "MOTA": 0.9559664102745042,
+        "IDF1": 0.6738451599009367,
+        "IDS": 93,
+        "FP": 25,
+        "FN": 506,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 91
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-074": {
+      "metrics": {
+        "MOTA": 0.9593742114559677,
+        "IDF1": 0.8140519730510106,
+        "IDS": 72,
+        "FP": 19,
+        "FN": 553,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 72
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-075": {
+      "metrics": {
+        "MOTA": 0.9670087471588953,
+        "IDF1": 0.8211348110971699,
+        "IDS": 51,
+        "FP": 41,
+        "FN": 387,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 43
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-076": {
+      "metrics": {
+        "MOTA": 0.9880271527072532,
+        "IDF1": 0.9706380120886501,
+        "IDS": 15,
+        "FP": 8,
+        "FN": 201,
+        "MT": 28,
+        "ML": 0,
+        "Frag": 13
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-077": {
+      "metrics": {
+        "MOTA": 0.9806121035867609,
+        "IDF1": 0.943771596104848,
+        "IDS": 35,
+        "FP": 6,
+        "FN": 239,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 35
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-097": {
+      "metrics": {
+        "MOTA": 0.9526184538653366,
+        "IDF1": 0.8176430815734002,
+        "IDS": 37,
+        "FP": 25,
+        "FN": 546,
+        "MT": 20,
+        "ML": 0,
+        "Frag": 31
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-098": {
+      "metrics": {
+        "MOTA": 0.9431476294221393,
+        "IDF1": 0.7596923892866614,
+        "IDS": 71,
+        "FP": 27,
+        "FN": 450,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 70
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-099": {
+      "metrics": {
+        "MOTA": 0.9347575057736721,
+        "IDF1": 0.7475296442687747,
+        "IDS": 88,
+        "FP": 23,
+        "FN": 567,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 86
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-100": {
+      "metrics": {
+        "MOTA": 0.9336614918591443,
+        "IDF1": 0.6371255626261059,
+        "IDS": 114,
+        "FP": 62,
+        "FN": 700,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 97
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-101": {
+      "metrics": {
+        "MOTA": 0.8816014600205315,
+        "IDF1": 0.671390823925054,
+        "IDS": 80,
+        "FP": 38,
+        "FN": 920,
+        "MT": 24,
+        "ML": 1,
+        "Frag": 78
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-102": {
+      "metrics": {
+        "MOTA": 0.96469609918355,
+        "IDF1": 0.7609670127581318,
+        "IDS": 54,
+        "FP": 29,
+        "FN": 384,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 53
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-103": {
+      "metrics": {
+        "MOTA": 0.9446518634964303,
+        "IDF1": 0.7429470231919949,
+        "IDS": 68,
+        "FP": 62,
+        "FN": 715,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 63
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-104": {
+      "metrics": {
+        "MOTA": 0.974500203998368,
+        "IDF1": 0.9240167478893541,
+        "IDS": 37,
+        "FP": 32,
+        "FN": 306,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 38
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-105": {
+      "metrics": {
+        "MOTA": 0.9482613679786015,
+        "IDF1": 0.783903922639008,
+        "IDS": 91,
+        "FP": 31,
+        "FN": 555,
+        "MT": 24,
+        "ML": 1,
+        "Frag": 88
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-106": {
+      "metrics": {
+        "MOTA": 0.9626586397657013,
+        "IDF1": 0.784627438043792,
+        "IDS": 94,
+        "FP": 16,
+        "FN": 349,
+        "MT": 23,
+        "ML": 1,
+        "Frag": 84
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-107": {
+      "metrics": {
+        "MOTA": 0.9477368546655,
+        "IDF1": 0.7140191465195521,
+        "IDS": 93,
+        "FP": 37,
+        "FN": 527,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 92
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-108": {
+      "metrics": {
+        "MOTA": 0.939278093883357,
+        "IDF1": 0.7266354076569399,
+        "IDS": 106,
+        "FP": 24,
+        "FN": 553,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 102
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-109": {
+      "metrics": {
+        "MOTA": 0.9512230634828188,
+        "IDF1": 0.6817778435142731,
+        "IDS": 132,
+        "FP": 55,
+        "FN": 483,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 127
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-110": {
+      "metrics": {
+        "MOTA": 0.9344115004492363,
+        "IDF1": 0.7306468310264177,
+        "IDS": 59,
+        "FP": 93,
+        "FN": 724,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 55
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-111": {
+      "metrics": {
+        "MOTA": 0.9508039147151346,
+        "IDF1": 0.8072364316905801,
+        "IDS": 63,
+        "FP": 27,
+        "FN": 473,
+        "MT": 26,
+        "ML": 0,
+        "Frag": 59
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-112": {
+      "metrics": {
+        "MOTA": 0.9358108108108109,
+        "IDF1": 0.7862674238513164,
+        "IDS": 84,
+        "FP": 120,
+        "FN": 556,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 80
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-113": {
+      "metrics": {
+        "MOTA": 0.9910532994923857,
+        "IDF1": 0.937629210266849,
+        "IDS": 16,
+        "FP": 23,
+        "FN": 102,
+        "MT": 31,
+        "ML": 0,
+        "Frag": 13
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-114": {
+      "metrics": {
+        "MOTA": 0.9343683839096684,
+        "IDF1": 0.7985264359466612,
+        "IDS": 44,
+        "FP": 21,
+        "FN": 586,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 43
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-115": {
+      "metrics": {
+        "MOTA": 0.9549980995819081,
+        "IDF1": 0.7736673238238818,
+        "IDS": 71,
+        "FP": 40,
+        "FN": 481,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 64
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-151": {
+      "metrics": {
+        "MOTA": 0.9269715791454922,
+        "IDF1": 0.6774271727012747,
+        "IDS": 117,
+        "FP": 19,
+        "FN": 640,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 115
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-152": {
+      "metrics": {
+        "MOTA": 0.9775548589341693,
+        "IDF1": 0.85810084139938,
+        "IDS": 26,
+        "FP": 23,
+        "FN": 309,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 17
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-153": {
+      "metrics": {
+        "MOTA": 0.9097132652048814,
+        "IDF1": 0.5746134483998562,
+        "IDS": 155,
+        "FP": 32,
+        "FN": 723,
+        "MT": 25,
+        "ML": 1,
+        "Frag": 149
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-154": {
+      "metrics": {
+        "MOTA": 0.929490637281344,
+        "IDF1": 0.5313217708085848,
+        "IDS": 113,
+        "FP": 51,
+        "FN": 751,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 101
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-155": {
+      "metrics": {
+        "MOTA": 0.9417994207096307,
+        "IDF1": 0.8178614485764629,
+        "IDS": 77,
+        "FP": 18,
+        "FN": 548,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 76
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-156": {
+      "metrics": {
+        "MOTA": 0.9808296668761785,
+        "IDF1": 0.8682722347451259,
+        "IDS": 41,
+        "FP": 17,
+        "FN": 186,
+        "MT": 21,
+        "ML": 1,
+        "Frag": 35
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-157": {
+      "metrics": {
+        "MOTA": 0.9273197357081299,
+        "IDF1": 0.5441995759996056,
+        "IDS": 112,
+        "FP": 22,
+        "FN": 625,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 111
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-158": {
+      "metrics": {
+        "MOTA": 0.9374645758549027,
+        "IDF1": 0.6069299733462563,
+        "IDS": 81,
+        "FP": 22,
+        "FN": 559,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 80
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-159": {
+      "metrics": {
+        "MOTA": 0.9208764940239044,
+        "IDF1": 0.5419100106934277,
+        "IDS": 141,
+        "FP": 33,
+        "FN": 819,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 136
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-160": {
+      "metrics": {
+        "MOTA": 0.9330219523587109,
+        "IDF1": 0.7101052328095718,
+        "IDS": 68,
+        "FP": 25,
+        "FN": 624,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 68
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-161": {
+      "metrics": {
+        "MOTA": 0.9083356158130192,
+        "IDF1": 0.7277904328018223,
+        "IDS": 82,
+        "FP": 44,
+        "FN": 878,
+        "MT": 24,
+        "ML": 1,
+        "Frag": 79
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-162": {
+      "metrics": {
+        "MOTA": 0.9311977509802472,
+        "IDF1": 0.5580458896824191,
+        "IDS": 148,
+        "FP": 36,
+        "FN": 746,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 139
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-163": {
+      "metrics": {
+        "MOTA": 0.9090822814842935,
+        "IDF1": 0.5806706114398422,
+        "IDS": 98,
+        "FP": 33,
+        "FN": 827,
+        "MT": 24,
+        "ML": 1,
+        "Frag": 92
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-164": {
+      "metrics": {
+        "MOTA": 0.9558812858283143,
+        "IDF1": 0.7291582093958741,
+        "IDS": 101,
+        "FP": 21,
+        "FN": 486,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 97
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-165": {
+      "metrics": {
+        "MOTA": 0.9508026030368764,
+        "IDF1": 0.8698269375470279,
+        "IDS": 56,
+        "FP": 27,
+        "FN": 484,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 56
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-166": {
+      "metrics": {
+        "MOTA": 0.9582307749683001,
+        "IDF1": 0.8746258477626644,
+        "IDS": 75,
+        "FP": 32,
+        "FN": 453,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 74
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-167": {
+      "metrics": {
+        "MOTA": 0.9372485298669143,
+        "IDF1": 0.6905074104978742,
+        "IDS": 110,
+        "FP": 10,
+        "FN": 691,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 102
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-168": {
+      "metrics": {
+        "MOTA": 0.960935230903282,
+        "IDF1": 0.7684936051011758,
+        "IDS": 93,
+        "FP": 16,
+        "FN": 429,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 89
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-169": {
+      "metrics": {
+        "MOTA": 0.9194179714091218,
+        "IDF1": 0.632218309859155,
+        "IDS": 121,
+        "FP": 21,
+        "FN": 805,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 122
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    },
+    "train_SNMOT-170": {
+      "metrics": {
+        "MOTA": 0.9416133364936399,
+        "IDF1": 0.7656629431762991,
+        "IDS": 119,
+        "FP": 7,
+        "FN": 613,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 116
+      },
+      "regime": {
+        "accel_only": 607,
+        "pan_only": 557,
+        "both": 2838,
+        "neither": 600,
+        "total": 4602
+      }
+    }
+  },
+  "full": {
+    "train_SNMOT-060": {
+      "metrics": {
+        "MOTA": 0.9139586410635155,
+        "IDF1": 0.5285627004734993,
+        "IDS": 209,
+        "FP": 32,
+        "FN": 924,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 203
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-061": {
+      "metrics": {
+        "MOTA": 0.9225131825900438,
+        "IDF1": 0.5449764738444506,
+        "IDS": 107,
+        "FP": 30,
+        "FN": 730,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 104
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-062": {
+      "metrics": {
+        "MOTA": 0.9548681162669058,
+        "IDF1": 0.7017436990786569,
+        "IDS": 68,
+        "FP": 18,
+        "FN": 518,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 68
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-063": {
+      "metrics": {
+        "MOTA": 0.9063241430090813,
+        "IDF1": 0.4660844497201967,
+        "IDS": 209,
+        "FP": 39,
+        "FN": 897,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 198
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-064": {
+      "metrics": {
+        "MOTA": 0.9427426810477658,
+        "IDF1": 0.5505660141347176,
+        "IDS": 179,
+        "FP": 139,
+        "FN": 611,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 163
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-065": {
+      "metrics": {
+        "MOTA": 0.948064280496713,
+        "IDF1": 0.5305316493424239,
+        "IDS": 128,
+        "FP": 22,
+        "FN": 561,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 126
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-066": {
+      "metrics": {
+        "MOTA": 0.9387145941826496,
+        "IDF1": 0.48463564530289727,
+        "IDS": 186,
+        "FP": 20,
+        "FN": 759,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 179
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-067": {
+      "metrics": {
+        "MOTA": 0.9360879299816812,
+        "IDF1": 0.4812510860121633,
+        "IDS": 199,
+        "FP": 20,
+        "FN": 723,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 191
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-068": {
+      "metrics": {
+        "MOTA": 0.942744102717229,
+        "IDF1": 0.6856662591687042,
+        "IDS": 99,
+        "FP": 26,
+        "FN": 642,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 98
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-069": {
+      "metrics": {
+        "MOTA": 0.9631275335204241,
+        "IDF1": 0.8073605065294815,
+        "IDS": 57,
+        "FP": 15,
+        "FN": 401,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 58
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-070": {
+      "metrics": {
+        "MOTA": 0.9121276220694517,
+        "IDF1": 0.5956107131450472,
+        "IDS": 188,
+        "FP": 17,
+        "FN": 792,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 183
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-071": {
+      "metrics": {
+        "MOTA": 0.9432075723236901,
+        "IDF1": 0.59303388281488,
+        "IDS": 125,
+        "FP": 133,
+        "FN": 594,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 105
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-072": {
+      "metrics": {
+        "MOTA": 0.9487847887755885,
+        "IDF1": 0.7573370949414208,
+        "IDS": 75,
+        "FP": 14,
+        "FN": 579,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 75
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-073": {
+      "metrics": {
+        "MOTA": 0.9239291510831981,
+        "IDF1": 0.5515610217596972,
+        "IDS": 186,
+        "FP": 16,
+        "FN": 876,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 181
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-074": {
+      "metrics": {
+        "MOTA": 0.943287913197073,
+        "IDF1": 0.551786405262479,
+        "IDS": 181,
+        "FP": 13,
+        "FN": 705,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 172
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-075": {
+      "metrics": {
+        "MOTA": 0.9657689923548454,
+        "IDF1": 0.6591734152471377,
+        "IDS": 69,
+        "FP": 19,
+        "FN": 409,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 59
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-076": {
+      "metrics": {
+        "MOTA": 0.9826821315944197,
+        "IDF1": 0.9259468626342566,
+        "IDS": 39,
+        "FP": 8,
+        "FN": 277,
+        "MT": 28,
+        "ML": 0,
+        "Frag": 38
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-077": {
+      "metrics": {
+        "MOTA": 0.9690486082260075,
+        "IDF1": 0.8006312467122567,
+        "IDS": 74,
+        "FP": 2,
+        "FN": 371,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 72
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-097": {
+      "metrics": {
+        "MOTA": 0.9521508728179551,
+        "IDF1": 0.8276657518991369,
+        "IDS": 53,
+        "FP": 20,
+        "FN": 541,
+        "MT": 20,
+        "ML": 0,
+        "Frag": 50
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-098": {
+      "metrics": {
+        "MOTA": 0.9345367776740325,
+        "IDF1": 0.7291233679722888,
+        "IDS": 80,
+        "FP": 19,
+        "FN": 532,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 80
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-099": {
+      "metrics": {
+        "MOTA": 0.911855273287144,
+        "IDF1": 0.6310320711359776,
+        "IDS": 128,
+        "FP": 11,
+        "FN": 777,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 125
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-100": {
+      "metrics": {
+        "MOTA": 0.9409314653540326,
+        "IDF1": 0.7552811432121777,
+        "IDS": 74,
+        "FP": 24,
+        "FN": 682,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 67
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-101": {
+      "metrics": {
+        "MOTA": 0.8575339340709479,
+        "IDF1": 0.6537134556019611,
+        "IDS": 166,
+        "FP": 35,
+        "FN": 1048,
+        "MT": 23,
+        "ML": 1,
+        "Frag": 165
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-102": {
+      "metrics": {
+        "MOTA": 0.9510130027214998,
+        "IDF1": 0.6294670363524337,
+        "IDS": 110,
+        "FP": 25,
+        "FN": 513,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 106
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-103": {
+      "metrics": {
+        "MOTA": 0.9470098906137421,
+        "IDF1": 0.6704613942275497,
+        "IDS": 85,
+        "FP": 28,
+        "FN": 696,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 80
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-104": {
+      "metrics": {
+        "MOTA": 0.9681082551339589,
+        "IDF1": 0.7424680148576145,
+        "IDS": 67,
+        "FP": 33,
+        "FN": 369,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 61
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-105": {
+      "metrics": {
+        "MOTA": 0.9179977072984333,
+        "IDF1": 0.5128508823877769,
+        "IDS": 194,
+        "FP": 19,
+        "FN": 860,
+        "MT": 23,
+        "ML": 1,
+        "Frag": 192
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-106": {
+      "metrics": {
+        "MOTA": 0.9374389847054995,
+        "IDF1": 0.6401663201663201,
+        "IDS": 177,
+        "FP": 29,
+        "FN": 563,
+        "MT": 21,
+        "ML": 1,
+        "Frag": 147
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-107": {
+      "metrics": {
+        "MOTA": 0.921406411582213,
+        "IDF1": 0.6158071656964828,
+        "IDS": 188,
+        "FP": 26,
+        "FN": 774,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 185
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-108": {
+      "metrics": {
+        "MOTA": 0.9007823613086771,
+        "IDF1": 0.645316327002172,
+        "IDS": 213,
+        "FP": 23,
+        "FN": 880,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 208
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-109": {
+      "metrics": {
+        "MOTA": 0.925596971461852,
+        "IDF1": 0.5285516622415019,
+        "IDS": 205,
+        "FP": 43,
+        "FN": 774,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 197
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-110": {
+      "metrics": {
+        "MOTA": 0.9231057202755316,
+        "IDF1": 0.5085987506747899,
+        "IDS": 177,
+        "FP": 36,
+        "FN": 814,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 152
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-111": {
+      "metrics": {
+        "MOTA": 0.9427647675637889,
+        "IDF1": 0.7753970029076269,
+        "IDS": 96,
+        "FP": 13,
+        "FN": 546,
+        "MT": 26,
+        "ML": 0,
+        "Frag": 90
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-112": {
+      "metrics": {
+        "MOTA": 0.9386824324324324,
+        "IDF1": 0.7099398502747847,
+        "IDS": 119,
+        "FP": 18,
+        "FN": 589,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 117
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-113": {
+      "metrics": {
+        "MOTA": 0.979505076142132,
+        "IDF1": 0.8444912683970246,
+        "IDS": 102,
+        "FP": 12,
+        "FN": 209,
+        "MT": 31,
+        "ML": 0,
+        "Frag": 100
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-114": {
+      "metrics": {
+        "MOTA": 0.8964613368283093,
+        "IDF1": 0.6955197226745102,
+        "IDS": 190,
+        "FP": 19,
+        "FN": 818,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 183
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-115": {
+      "metrics": {
+        "MOTA": 0.951729380463702,
+        "IDF1": 0.5628728596885411,
+        "IDS": 115,
+        "FP": 12,
+        "FN": 508,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 108
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-151": {
+      "metrics": {
+        "MOTA": 0.8976096367400715,
+        "IDF1": 0.5736883474159953,
+        "IDS": 166,
+        "FP": 13,
+        "FN": 909,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 164
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-152": {
+      "metrics": {
+        "MOTA": 0.9795611285266458,
+        "IDF1": 0.8815114880688651,
+        "IDS": 18,
+        "FP": 3,
+        "FN": 305,
+        "MT": 21,
+        "ML": 0,
+        "Frag": 18
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-153": {
+      "metrics": {
+        "MOTA": 0.8954261335449946,
+        "IDF1": 0.5812532366649404,
+        "IDS": 164,
+        "FP": 21,
+        "FN": 869,
+        "MT": 25,
+        "ML": 1,
+        "Frag": 162
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-154": {
+      "metrics": {
+        "MOTA": 0.8915003467673577,
+        "IDF1": 0.42932358024195166,
+        "IDS": 269,
+        "FP": 33,
+        "FN": 1106,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 250
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-155": {
+      "metrics": {
+        "MOTA": 0.92894641564084,
+        "IDF1": 0.6671014020215194,
+        "IDS": 114,
+        "FP": 22,
+        "FN": 649,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 109
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-156": {
+      "metrics": {
+        "MOTA": 0.9648020113136392,
+        "IDF1": 0.7021005728835137,
+        "IDS": 96,
+        "FP": 16,
+        "FN": 336,
+        "MT": 21,
+        "ML": 1,
+        "Frag": 87
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-157": {
+      "metrics": {
+        "MOTA": 0.8898783874365603,
+        "IDF1": 0.482879280179955,
+        "IDS": 233,
+        "FP": 18,
+        "FN": 899,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 230
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-158": {
+      "metrics": {
+        "MOTA": 0.9028906102399396,
+        "IDF1": 0.5471133565507431,
+        "IDS": 203,
+        "FP": 20,
+        "FN": 805,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 196
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-159": {
+      "metrics": {
+        "MOTA": 0.8915537848605578,
+        "IDF1": 0.45692915021815916,
+        "IDS": 280,
+        "FP": 23,
+        "FN": 1058,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 271
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-160": {
+      "metrics": {
+        "MOTA": 0.9162073797290986,
+        "IDF1": 0.5708627185779152,
+        "IDS": 151,
+        "FP": 19,
+        "FN": 727,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 151
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-161": {
+      "metrics": {
+        "MOTA": 0.910983292248699,
+        "IDF1": 0.6650526915408715,
+        "IDS": 95,
+        "FP": 20,
+        "FN": 860,
+        "MT": 24,
+        "ML": 1,
+        "Frag": 95
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-162": {
+      "metrics": {
+        "MOTA": 0.8671302803876599,
+        "IDF1": 0.3826534591685516,
+        "IDS": 344,
+        "FP": 30,
+        "FN": 1422,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 330
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-163": {
+      "metrics": {
+        "MOTA": 0.8864003036917529,
+        "IDF1": 0.5026583850931677,
+        "IDS": 202,
+        "FP": 23,
+        "FN": 972,
+        "MT": 24,
+        "ML": 1,
+        "Frag": 192
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-164": {
+      "metrics": {
+        "MOTA": 0.937958058196067,
+        "IDF1": 0.5068843941362033,
+        "IDS": 208,
+        "FP": 15,
+        "FN": 632,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 206
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-165": {
+      "metrics": {
+        "MOTA": 0.940997830802603,
+        "IDF1": 0.8097058039285396,
+        "IDS": 88,
+        "FP": 22,
+        "FN": 570,
+        "MT": 25,
+        "ML": 0,
+        "Frag": 80
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-166": {
+      "metrics": {
+        "MOTA": 0.9496531662564333,
+        "IDF1": 0.802417515584613,
+        "IDS": 115,
+        "FP": 27,
+        "FN": 533,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 113
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-167": {
+      "metrics": {
+        "MOTA": 0.9302847415660787,
+        "IDF1": 0.45940672904638663,
+        "IDS": 148,
+        "FP": 10,
+        "FN": 743,
+        "MT": 23,
+        "ML": 0,
+        "Frag": 136
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-168": {
+      "metrics": {
+        "MOTA": 0.9517862329363926,
+        "IDF1": 0.6240846216436127,
+        "IDS": 128,
+        "FP": 15,
+        "FN": 521,
+        "MT": 22,
+        "ML": 0,
+        "Frag": 122
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-169": {
+      "metrics": {
+        "MOTA": 0.8935500340367597,
+        "IDF1": 0.46541216246274303,
+        "IDS": 192,
+        "FP": 17,
+        "FN": 1042,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 183
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    },
+    "train_SNMOT-170": {
+      "metrics": {
+        "MOTA": 0.919570198309236,
+        "IDF1": 0.6468092051574996,
+        "IDS": 188,
+        "FP": 12,
+        "FN": 818,
+        "MT": 24,
+        "ML": 0,
+        "Frag": 183
+      },
+      "regime": {
+        "accel_only": 716,
+        "pan_only": 435,
+        "both": 6631,
+        "neither": 537,
+        "total": 8319
+      }
+    }
+  }
+}

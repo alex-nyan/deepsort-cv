@@ -16,3 +16,6 @@ __pycache__/
 
 # Model weights
 *.pt
+
+# Matplotlib cache (generate_results_figures.py)
+results/analysis/mpl-cache/
