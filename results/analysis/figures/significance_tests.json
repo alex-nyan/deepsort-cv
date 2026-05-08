@@ -1,0 +1,134 @@
+{
+  "SportsMOT": {
+    "MOTA": [
+      {
+        "pair": "baseline vs accel_only",
+        "statistic": 82.0,
+        "p_value": 0.001340603455901146
+      },
+      {
+        "pair": "baseline vs cmc_only",
+        "statistic": 5.0,
+        "p_value": 1.862645149230957e-08
+      },
+      {
+        "pair": "baseline vs full",
+        "statistic": 6.0,
+        "p_value": 2.60770320892334e-08
+      },
+      {
+        "pair": "accel_only vs cmc_only",
+        "statistic": 44.0,
+        "p_value": 2.6885420083999634e-05
+      },
+      {
+        "pair": "accel_only vs full",
+        "statistic": 40.0,
+        "p_value": 1.597777009010315e-05
+      },
+      {
+        "pair": "cmc_only vs full",
+        "statistic": 176.0,
+        "p_value": 0.25343610532581806
+      }
+    ],
+    "IDF1": [
+      {
+        "pair": "baseline vs accel_only",
+        "statistic": 44.0,
+        "p_value": 2.6885420083999634e-05
+      },
+      {
+        "pair": "baseline vs cmc_only",
+        "statistic": 0.0,
+        "p_value": 1.862645149230957e-09
+      },
+      {
+        "pair": "baseline vs full",
+        "statistic": 10.0,
+        "p_value": 8.009374141693115e-08
+      },
+      {
+        "pair": "accel_only vs cmc_only",
+        "statistic": 161.0,
+        "p_value": 0.1459994912147522
+      },
+      {
+        "pair": "accel_only vs full",
+        "statistic": 223.0,
+        "p_value": 0.8552717231214046
+      },
+      {
+        "pair": "cmc_only vs full",
+        "statistic": 127.0,
+        "p_value": 0.029325857758522034
+      }
+    ]
+  },
+  "SoccerNet": {
+    "MOTA": [
+      {
+        "pair": "baseline vs accel_only",
+        "statistic": 0.0,
+        "p_value": 5.143753751233157e-11
+      },
+      {
+        "pair": "baseline vs cmc_only",
+        "statistic": 5.0,
+        "p_value": 6.710522165256137e-11
+      },
+      {
+        "pair": "baseline vs full",
+        "statistic": 8.0,
+        "p_value": 7.865381911292028e-11
+      },
+      {
+        "pair": "accel_only vs cmc_only",
+        "statistic": 66.0,
+        "p_value": 1.5190366171375555e-09
+      },
+      {
+        "pair": "accel_only vs full",
+        "statistic": 169.0,
+        "p_value": 1.7512307864204787e-07
+      },
+      {
+        "pair": "cmc_only vs full",
+        "statistic": 37.0,
+        "p_value": 3.5474495511039377e-10
+      }
+    ],
+    "IDF1": [
+      {
+        "pair": "baseline vs accel_only",
+        "statistic": 0.0,
+        "p_value": 5.143753751233157e-11
+      },
+      {
+        "pair": "baseline vs cmc_only",
+        "statistic": 2.0,
+        "p_value": 5.722043853346436e-11
+      },
+      {
+        "pair": "baseline vs full",
+        "statistic": 1.0,
+        "p_value": 5.425366758242546e-11
+      },
+      {
+        "pair": "accel_only vs cmc_only",
+        "statistic": 38.0,
+        "p_value": 3.7331241679903215e-10
+      },
+      {
+        "pair": "accel_only vs full",
+        "statistic": 519.0,
+        "p_value": 0.014559624386371912
+      },
+      {
+        "pair": "cmc_only vs full",
+        "statistic": 36.0,
+        "p_value": 3.3708017733856764e-10
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+% =============================================================================
+% CVPR-style Results section + figures for accel-deepsort experiments
+% -----------------------------------------------------------------------------
+% Usage (in main.tex preamble):
+%   \usepackage{graphicx}
+%   \usepackage{caption}
+%   \usepackage{subcaption}   % optional, only if you split composite PNGs
+%
+% Before \input{results/analysis/cvpr_results_figures.tex} set graphics path,
+% e.g. from repository root:
+%   \graphicspath{{results/analysis/figures/}}
+%
+% Or copy the three PNGs into your paper's ./figures/ and use that folder instead.
+% =============================================================================
+
+\section{Results}
+\label{sec:results}
+
+\paragraph{Experimental setup.}
+We evaluate four tracker variants on MOTChallenge-format sequences:
+\textbf{Baseline} (constant-velocity Kalman filter, no camera compensation),
+\textbf{Accel-only} (constant-acceleration Kalman filter),
+\textbf{CMC-only} (constant velocity with ECC-based camera-motion compensation),
+and \textbf{Full} (constant acceleration with ECC).
+We report \textbf{MOTA} and \textbf{IDF1} averaged over sequences, and \textbf{IDS} summed over sequences (fewer identity switches is better).
+On SportsMOT soccer we pool \textbf{train and validation} splits (30 sequences total); on SoccerNet Tracking we evaluate the \textbf{train} split (57 sequences).
+BoT-SORT baselines are omitted here; SportsMOT sequences without detections were filled using YOLOv8, whereas SoccerNet uses released detections.
+
+\paragraph{Tracking performance.}
+Figure~\ref{fig:ablation_mota_idf1} shows mean MOTA and IDF1 per sequence.
+On \textbf{SportsMOT}, enabling camera compensation yields the largest gains: \textbf{CMC-only} and \textbf{Full} reach similar MOTA ($\approx$0.78), clearly above Baseline ($\approx$0.73).
+IDF1 follows the same trend, with CMC-only slightly strongest among ECC variants.
+On \textbf{SoccerNet train}, \textbf{CMC-only} is best overall (MOTA $\approx$0.95, IDF1 $\approx$0.74).
+Adding acceleration on top of ECC (\textbf{Full}) does not improve headline metrics on this split; MOTA and especially IDF1 drop relative to CMC-only, while Accel-only remains a large improvement over Baseline.
+
+Figure~\ref{fig:ablation_ids} reports the same trend through identity switches.
+IDS decreases monotonically toward Full on SportsMOT; on SoccerNet, IDS is lowest for CMC-only and rises again for Full.
+Together, Figs.~\ref{fig:ablation_mota_idf1}--\ref{fig:ablation_ids} indicate that \textbf{ECC is the dominant improvement under shared hyperparameters}, while \textbf{CA combined with ECC improves identity stability on SportsMOT but hurts it on SoccerNet train} in our configuration---suggesting dataset-dependent tuning rather than a universally optimal ``full'' stack.
+
+\paragraph{Kalman prediction analysis.}
+Figure~\ref{fig:prediction_horizon} compares open-loop center-error of constant-velocity versus constant-acceleration Kalman filters fit to ground-truth tracks, at prediction horizons $h \in \{1,5,10,15,20\}$ frames (see supplement for protocol details).
+\textbf{CA achieves lower error than CV at $h{=}1$} on both datasets, but \textbf{error grows faster for CA at longer horizons}, surpassing CV by $h{\geq}5$.
+This behavior is expected when forecasting without measurements: extra acceleration state helps one-step prediction but amplifies drift over many steps.
+We emphasize that Fig.~\ref{fig:prediction_horizon} is \emph{not} contradictory with tracker metrics---association uses frequent measurement updates---but it clarifies where CA does and does not show advantage.
+
+\paragraph{Limitations.}
+SportsMOT relies on generated detections where missing; SoccerNet uses dataset-provided detections.
+We do not report SoccerNet test/challenge splits here.
+For benchmark-aligned SportsMOT headline numbers, readers may prefer validation- or test-only evaluation; our pooled train+val evaluation is kept for stable per-variant comparison on a fixed set of sequences.
+
+% -----------------------------------------------------------------------------
+% Figures (requires \graphicspath{{results/analysis/figures/}} or equivalent)
+% -----------------------------------------------------------------------------
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig1_ablation_mota_idf1.png}
+  \caption{\textbf{Four-way ablation (tracking).}
+  Mean MOTA and IDF1 per sequence on SportsMOT soccer (train+val, 30 seq.; \emph{left}) and SoccerNet Tracking train (57 seq.; \emph{right}).
+  Camera-motion compensation (ECC) improves both metrics on both datasets.
+  Combining constant-acceleration KF with ECC (\textbf{Full}) matches strong ECC performance on SportsMOT but underperforms \textbf{CMC-only} on SoccerNet train under shared hyperparameters.}
+  \label{fig:ablation_mota_idf1}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=0.92\linewidth]{fig2_ablation_ids_totals.png}
+  \caption{\textbf{Identity switches by configuration.}
+  Total IDS summed over all sequences (lower is better).
+  SportsMOT (\emph{green}) benefits monotonically through \textbf{Full}.
+  SoccerNet train (\emph{red}) is best at \textbf{CMC-only}; \textbf{Full} increases IDS relative to \textbf{CMC-only}, consistent with lower IDF1 in Fig.~\ref{fig:ablation_mota_idf1}.}
+  \label{fig:ablation_ids}
+\end{figure}
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{fig3_prediction_horizon.png}
+  \caption{\textbf{Open-loop Kalman prediction error vs.\ horizon.}
+  Mean pixel error for CV (8D) vs.\ CA (12D) filters fit to GT tracks on SportsMOT soccer (\emph{left}) and SoccerNet train (\emph{right}).
+  CA is better at horizon 1 frame but degrades faster without measurements; long-horizon curves should not be equated with tracker association performance.}
+  \label{fig:prediction_horizon}
+\end{figure}
+
+% =============================================================================
+% Optional: compact numeric table (uncomment if journal asks for numbers)
+% =============================================================================
+% \begin{table}[t]
+%   \centering
+%   \small
+%   \begin{tabular}{lcccc}
+%     \toprule
+%     & \multicolumn{2}{c}{SportsMOT (train+val)} & \multicolumn{2}{c}{SoccerNet train} \\
+%     \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+%     Config & MOTA$\uparrow$ & IDF1$\uparrow$ & MOTA$\uparrow$ & IDF1$\uparrow$ \\
+%     \midrule
+%     Baseline      & 0.729 & 0.412 & 0.893 & 0.556 \\
+%     Accel-only    & 0.749 & 0.480 & 0.917 & 0.629 \\
+%     CMC-only      & 0.781 & 0.497 & \textbf{0.947} & \textbf{0.741} \\
+%     Full          & 0.780 & 0.491 & 0.930 & 0.626 \\
+%     \bottomrule
+%   \end{tabular}
+%   \caption{Mean MOTA / IDF1 per sequence (rounded). Best SoccerNet bold.}
+% \end{table}
