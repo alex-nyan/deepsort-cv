@@ -4,6 +4,8 @@ Multi-object tracking for broadcast soccer, extending DeepSORT with:
 1. **Constant-acceleration Kalman filter** (12D state vector) for bursty player dynamics
 2. **ECC camera-motion compensation** to correct for broadcast pan/zoom
 
+The repository ships **evaluation summaries, sensitivity outputs, publication figures, and LaTeX** so you can verify or extend the experiments without rerunning trackers. Intermediate per-sequence MOT outputs (`*_eval/ablation/*/...txt`, CA-sensitivity sweep folders under `results/ca_sensitivity/`) are intentionally **not** tracked; running `scripts/run_all.py` or `scripts/run_ca_sensitivity.py` regenerates them under `results/`.
+
 ## Project Structure
 
 ```
@@ -40,19 +42,20 @@ accel-deepsort/
 │   ├── generate_detections.py        # YOLOv8 detection generation → det/det.txt
 │   ├── convert_soccernet.py          # SoccerNet JSON → MOTChallenge format
 │   └── convert_sportsmot.py          # SportsMOT → MOTChallenge format (soccer filter)
-├── results/                          # All outputs (JSON, tracker output, figures)
-│   ├── soccer_eval/                  # SportsMOT ablation + prediction results
-│   ├── soccernet_eval/               # SoccerNet ablation + prediction results
-│   ├── ca_sensitivity/               # Process-noise sensitivity sweep results
+├── results/
+│   ├── soccer_eval/                  # Aggregates (tracked): ablation + prediction JSON
+│   ├── soccernet_eval/               # Same for SoccerNet train
+│   ├── ca_sensitivity/               # sensitivity_results.json (tracked); per-run dirs local only
 │   └── analysis/
-│       ├── figures/                  # Publication-ready PNGs
-│       └── cvpr_results_figures.tex  # LaTeX experiments section
+│       ├── figures/                  # Publication PNGs + significance_tests.json
+│       ├── cvpr_results_figures.tex  # LaTeX experiments section
+│       └── EVALUATION_REPORT.md      # Written summary of runs and figures
 └── requirements.txt
 ```
 
 ## Prerequisites
 
-- **Python 3.10+** (tested with 3.14)
+- **Python 3.10+** (for example 3.11 or 3.12; avoid pre-release interpreters for dependencies)
 - **GPU recommended** for YOLOv8 detection generation (CPU works but is slow)
 
 ## Setup
@@ -162,7 +165,7 @@ This executes 4 sub-steps automatically:
 3. **Regime analysis** — classifies IDS by cause (acceleration event, camera pan, both, neither)
 4. **KF prediction evaluation** — compares CV (8D) vs CA (12D) open-loop prediction at horizons 1/5/10/15/20 frames
 
-**Outputs:**
+**Outputs (aggregates tracked in git; per-sequence MOT `.txt` files live under `results/soccer_eval/ablation/` locally and are gitignored):**
 - `results/soccer_eval/ablation_results.json` — per-sequence metrics for all 4 configs
 - `results/soccer_eval/prediction_results.json` — CV vs CA prediction errors
 - `results/soccer_eval/all_results.json` — combined prediction summary
@@ -191,10 +194,7 @@ python scripts/run_all.py \
 
 We skip detection generation (SoccerNet provides detections).
 
-**Outputs:**
-- `results/soccernet_eval/ablation_results.json`
-- `results/soccernet_eval/prediction_results.json`
-- `results/soccernet_eval/all_results.json`
+**Outputs:** same layout as SportsMOT (`ablation_results.json`, `prediction_results.json`, `all_results.json`) plus local-only `ablation/<config>/*.txt` trajectories.
 
 **Expected runtime:** ~2–4 hours (tracking only, no detection generation).
 
@@ -214,7 +214,7 @@ python scripts/run_ca_sensitivity.py \
 This runs 4 full evaluations over 57 sequences (1× CMC-only reference + 3× CA+ECC at different noise values).
 
 **Outputs:**
-- `results/ca_sensitivity/sensitivity_results.json` — per-sequence metrics for each noise value
+- `results/ca_sensitivity/sensitivity_results.json` — per-sequence metrics for each noise value (the file in git matches the paper sweep; rerunning creates `cmc_only/` and `ca_accel_*` directories locally—those are gitignored)
 
 **Expected runtime:** ~3–6 hours.
 
@@ -362,20 +362,20 @@ All hyperparameters are in `configs/defaults.yaml`:
 
 ## Quick Start (Minimal Replication)
 
-If you just want to verify the pipeline works on a small subset:
+If you just want to verify the pipeline works on a small subset, point `--output_dir` at a **local** folder (for example `results/local_val_run`); only the default paths `results/soccer_eval` and `results/soccernet_eval` match the hardcoded inputs to `generate_results_figures.py`.
 
 ```bash
 # Activate environment
 source .venv/bin/activate
 
-# Run ablation on a single split (fastest)
+# Run ablation on val only (writes under your chosen directory; not committed)
 python scripts/run_all.py \
     --data_root soccer \
-    --output_dir results/quick_test \
+    --output_dir results/local_val_run \
     --splits val \
     --skip_detections
 
-# Generate figures from existing full results
+# Regenerate figures from the committed full-run JSON (after Steps 1–3 on default paths)
 python scripts/generate_results_figures.py
 ```
 
