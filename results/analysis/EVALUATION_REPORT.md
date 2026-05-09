@@ -2,8 +2,8 @@
 
 This report summarizes the completed **`scripts/run_all.py`** pipelines you ran locally. Exact commands:
 
-- **SportsMOT (`soccer/`)**: `train` + `val` (30 sequences), detectors generated where missing, **BoT-SORT skipped**.
-- **SoccerNet**: `soccernet_data/tracking` **`train`** only (57 sequences), existing **`det/`** used, **BoT-SORT skipped**.
+- **SportsMOT (`soccer/`)**: `train` + `val` (30 sequences), detectors generated where missing.
+- **SoccerNet**: `soccernet_data/tracking` **`train`** only (57 sequences), existing **`det/`** used.
 
 Raw JSON outputs live under `results/soccer_eval/` and `results/soccernet_eval/`. Figures generated from the same files are in `results/analysis/figures/` (run `python scripts/generate_results_figures.py` after edits).
 
@@ -64,7 +64,6 @@ Use **`fig3_prediction_horizon.png`** when explaining that **prediction benchmar
 
 ## 3. What was not run
 
-- **BoT-SORT baseline** (`botsort_results.json` empty): re-run `run_all.py` **without** `--skip_botsort` if you want an external comparison row.
 - **SoccerNet test / challenge**: not downloaded/evaluated here.
 - **SportsMOT test**: not included in these runs.
 
@@ -73,8 +72,7 @@ Use **`fig3_prediction_horizon.png`** when explaining that **prediction benchmar
 ## 4. Suggested next steps
 
 1. **Tune** on SoccerNet train if “full” should beat “cmc-only” (association thresholds, KF noise, ECC params in `configs/defaults.yaml`).
-2. **Run BoT-SORT** once for a complete comparison table in the README sense.
-3. **Regenerate figures** after any JSON refresh:
+2. **Regenerate figures** after any JSON refresh:
 
    ```bash
    python scripts/generate_results_figures.py

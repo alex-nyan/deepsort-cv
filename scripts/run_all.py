@@ -5,8 +5,7 @@ This is a single entry point that:
     1. Generates YOLOv8 detections for sequences missing det/det.txt
     2. Runs the four-way DeepSORT ablation (baseline, accel_only, cmc_only, full)
     3. Runs KF prediction accuracy evaluation (CV 8D vs CA 12D)
-    4. Runs YOLOv8 + BoT-SORT as external baseline
-    5. Aggregates results across train+val splits and prints paper-ready tables
+    4. Aggregates results across train+val splits and prints paper-ready tables
 
 Usage:
     # Run everything (will take a while on first run due to detection generation):
@@ -16,7 +15,6 @@ Usage:
     python scripts/run_all.py --skip_detections
 
     # Skip individual evaluation stages:
-    python scripts/run_all.py --skip_botsort
     python scripts/run_all.py --skip_prediction
 
     # Use a specific YOLO model:
@@ -315,72 +313,12 @@ def run_prediction_eval(data_root, splits, output_dir):
     return prediction_summary
 
 
-# ── Step 4: BoT-SORT baseline ────────────────────────────────────────────────
+# ── Step 4: Final comparison ─────────────────────────────────────────────────
 
-def run_botsort_eval(data_root, splits, output_dir, yolo_model="yolov8x.pt", conf=0.3):
-    """Run YOLOv8 + BoT-SORT and evaluate against GT."""
-    from ultralytics import YOLO
-    from scripts.run_botsort_baseline import run_botsort_on_sequence
-    from evaluation.mot_metrics import evaluate_sequence
-
-    print(f"\n{'='*60}")
-    print("[Step 4] BOT-SORT BASELINE (YOLOv8 + BoT-SORT)")
-    print(f"{'='*60}")
-
-    model = YOLO(yolo_model)
-    botsort_dir = os.path.join(output_dir, "botsort")
-    os.makedirs(botsort_dir, exist_ok=True)
-
-    botsort_metrics = {}
-
-    for split in splits:
-        split_dir = os.path.join(data_root, split)
-        if not os.path.isdir(split_dir):
-            continue
-        for seq in sorted(os.listdir(split_dir)):
-            seq_dir = os.path.join(split_dir, seq)
-            gt_file = os.path.join(seq_dir, "gt", "gt.txt")
-            if not os.path.exists(gt_file) or not os.path.isdir(os.path.join(seq_dir, "img1")):
-                continue
-
-            tag = f"{split}_{seq}"
-            output_file = os.path.join(botsort_dir, f"{tag}.txt")
-            print(f"  [{tag}] ", end="", flush=True)
-
-            model.predictor = None
-            t0 = time.time()
-            run_botsort_on_sequence(model, seq_dir, output_file, conf=conf)
-
-            try:
-                metrics = evaluate_sequence(gt_file, output_file)
-                botsort_metrics[tag] = metrics
-                elapsed = time.time() - t0
-                print(f"MOTA={metrics['MOTA']:.4f}  IDF1={metrics['IDF1']:.4f}  "
-                      f"IDS={metrics['IDS']}  ({elapsed:.1f}s)")
-            except Exception as e:
-                print(f"eval error: {e}")
-
-    if botsort_metrics:
-        print(f"\n  BoT-SORT aggregate ({len(botsort_metrics)} seqs):")
-        m = list(botsort_metrics.values())
-        print(f"    MOTA={np.mean([x['MOTA'] for x in m]):.4f}  "
-              f"IDF1={np.mean([x['IDF1'] for x in m]):.4f}  "
-              f"IDS={sum(x['IDS'] for x in m)}")
-
-    botsort_file = os.path.join(output_dir, "botsort_results.json")
-    with open(botsort_file, "w") as f:
-        json.dump(botsort_metrics, f, indent=2, default=str)
-    print(f"  Saved to {botsort_file}")
-
-    return botsort_metrics
-
-
-# ── Step 5: Final comparison ─────────────────────────────────────────────────
-
-def print_final_comparison(ablation_results, botsort_metrics, output_dir):
+def print_final_comparison(ablation_results, _output_dir):
     """Print a unified paper-ready comparison table."""
     print(f"\n{'='*60}")
-    print("[Step 5] FINAL COMPARISON TABLE")
+    print("[Step 4] FINAL COMPARISON TABLE")
     print(f"{'='*60}")
 
     LABELS = {
@@ -406,15 +344,6 @@ def print_final_comparison(ablation_results, botsort_metrics, output_dir):
               f"{sum(x['FP'] for x in evaluated):>8}"
               f"{sum(x['FN'] for x in evaluated):>8}")
 
-    if botsort_metrics:
-        m = list(botsort_metrics.values())
-        print(f"{'YOLOv8 + BoT-SORT':<32}"
-              f"{np.mean([x['MOTA'] for x in m]):>10.4f}"
-              f"{np.mean([x['IDF1'] for x in m]):>10.4f}"
-              f"{sum(x['IDS'] for x in m):>8}"
-              f"{sum(x['FP'] for x in m):>8}"
-              f"{sum(x['FN'] for x in m):>8}")
-
     print()
 
 
@@ -434,7 +363,7 @@ def main():
     parser.add_argument("--splits", nargs="+", default=["train", "val"],
                         help="Which splits to evaluate (default: train val)")
     parser.add_argument("--yolo_model", default="yolov8x.pt",
-                        help="YOLOv8 model for detection generation and BoT-SORT")
+                        help="YOLOv8 model for detection generation")
     parser.add_argument("--reid_model", default=None,
                         help="Path to Re-ID model weights (optional)")
     parser.add_argument("--conf", type=float, default=0.3,
@@ -446,8 +375,6 @@ def main():
                         help="Skip four-way ablation")
     parser.add_argument("--skip_prediction", action="store_true",
                         help="Skip KF prediction evaluation")
-    parser.add_argument("--skip_botsort", action="store_true",
-                        help="Skip BoT-SORT baseline")
 
     args = parser.parse_args()
 
@@ -490,22 +417,13 @@ def main():
             args.data_root, args.splits, args.output_dir,
         )
 
-    # ── Step 4: BoT-SORT baseline ──
-    botsort_metrics = {}
-    if not args.skip_botsort:
-        botsort_metrics = run_botsort_eval(
-            args.data_root, args.splits, args.output_dir,
-            yolo_model=args.yolo_model, conf=args.conf,
-        )
-
-    # ── Step 5: Final comparison ──
-    if ablation_results or botsort_metrics:
-        print_final_comparison(ablation_results, botsort_metrics, args.output_dir)
+    # ── Step 4: Final comparison ──
+    if ablation_results:
+        print_final_comparison(ablation_results, args.output_dir)
 
     # ── Save combined results ──
     combined = {
         "prediction": prediction_summary,
-        "botsort": botsort_metrics,
     }
     combined_file = os.path.join(args.output_dir, "all_results.json")
     with open(combined_file, "w") as f:

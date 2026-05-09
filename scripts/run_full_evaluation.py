@@ -3,16 +3,14 @@ Full evaluation pipeline: runs all experiments described in the paper.
 
 This is a single entry point that:
     1. Runs the four-way DeepSORT ablation
-    2. Runs YOLOv8 + BoT-SORT as external baseline
-    3. Runs prediction accuracy evaluation
-    4. Generates a unified comparison table
+    2. Runs prediction accuracy evaluation
+    3. Generates a unified comparison table
 
 Usage:
     python scripts/run_full_evaluation.py \
         --config configs/defaults.yaml \
         --data_root /path/to/dataset \
-        --output_dir results/full_eval \
-        --yolo_model yolov8x.pt
+        --output_dir results/full_eval
 """
 
 import argparse
@@ -26,48 +24,7 @@ import yaml
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from scripts.run_ablation import run_ablation
-from scripts.run_botsort_baseline import run_botsort_on_sequence
-from scripts.evaluate_prediction import evaluate_prediction, print_results
-from evaluation.mot_metrics import evaluate_sequence
-
-
-def run_botsort_evaluation(data_root, output_dir, yolo_model="yolov8x.pt", conf=0.3):
-    """Run BoT-SORT baseline and evaluate."""
-    from ultralytics import YOLO
-
-    print("\n" + "=" * 60)
-    print("BOTSORT BASELINE (YOLOv8 + BoT-SORT)")
-    print("=" * 60)
-
-    model = YOLO(yolo_model)
-    botsort_dir = os.path.join(output_dir, "botsort")
-    os.makedirs(botsort_dir, exist_ok=True)
-
-    sequences = sorted(
-        d for d in os.listdir(data_root)
-        if os.path.isdir(os.path.join(data_root, d, "img1"))
-    )
-
-    botsort_metrics = {}
-    for seq_name in sequences:
-        seq_dir = os.path.join(data_root, seq_name)
-        output_file = os.path.join(botsort_dir, f"{seq_name}.txt")
-
-        print(f"\n  Processing: {seq_name}")
-        model.predictor = None
-        run_botsort_on_sequence(model, seq_dir, output_file, conf=conf)
-
-        gt_file = os.path.join(seq_dir, "gt", "gt.txt")
-        if os.path.exists(gt_file) and os.path.exists(output_file):
-            try:
-                metrics = evaluate_sequence(gt_file, output_file)
-                botsort_metrics[seq_name] = metrics
-                print(f"    MOTA: {metrics['MOTA']:.4f}  IDF1: {metrics['IDF1']:.4f}  "
-                      f"IDS: {metrics['IDS']}")
-            except Exception as e:
-                print(f"    Evaluation error: {e}")
-
-    return botsort_metrics
+from scripts.evaluate_prediction import evaluate_prediction
 
 
 def run_prediction_evaluation(data_root, output_dir):
@@ -130,7 +87,7 @@ def run_prediction_evaluation(data_root, output_dir):
     return prediction_summary
 
 
-def generate_final_comparison(ablation_results_file, botsort_metrics, output_dir):
+def generate_final_comparison(ablation_results_file, _output_dir):
     """Generate the final paper-ready comparison table."""
     print("\n" + "=" * 60)
     print("FINAL COMPARISON TABLE (For Paper)")
@@ -171,29 +128,14 @@ def generate_final_comparison(ablation_results_file, botsort_metrics, output_dir
         print(f"{label:<30}{avg_mota:>10.4f}{avg_idf1:>10.4f}"
               f"{total_ids:>8}{total_fp:>8}{total_fn:>8}")
 
-    # Print BoT-SORT results
-    if botsort_metrics:
-        metrics_list = list(botsort_metrics.values())
-        avg_mota = np.mean([m["MOTA"] for m in metrics_list])
-        avg_idf1 = np.mean([m["IDF1"] for m in metrics_list])
-        total_ids = sum(m["IDS"] for m in metrics_list)
-        total_fp = sum(m["FP"] for m in metrics_list)
-        total_fn = sum(m["FN"] for m in metrics_list)
-
-        print(f"{'YOLOv8 + BoT-SORT':<30}{avg_mota:>10.4f}{avg_idf1:>10.4f}"
-              f"{total_ids:>8}{total_fp:>8}{total_fn:>8}")
-
 
 def main():
     parser = argparse.ArgumentParser(description="Full evaluation pipeline")
     parser.add_argument("--config", default="configs/defaults.yaml")
     parser.add_argument("--data_root", required=True)
     parser.add_argument("--output_dir", default="results/full_eval")
-    parser.add_argument("--yolo_model", default="yolov8x.pt")
     parser.add_argument("--reid_model", default=None)
-    parser.add_argument("--conf", type=float, default=0.3)
     parser.add_argument("--skip_ablation", action="store_true")
-    parser.add_argument("--skip_botsort", action="store_true")
     parser.add_argument("--skip_prediction", action="store_true")
     args = parser.parse_args()
 
@@ -206,25 +148,17 @@ def main():
     if not args.skip_ablation:
         run_ablation(config, args.data_root, args.output_dir, args.reid_model)
 
-    # --- 2. BoT-SORT baseline ---
-    botsort_metrics = {}
-    if not args.skip_botsort:
-        botsort_metrics = run_botsort_evaluation(
-            args.data_root, args.output_dir, args.yolo_model, args.conf
-        )
-
-    # --- 3. Prediction evaluation ---
+    # --- 2. Prediction evaluation ---
     prediction_summary = {}
     if not args.skip_prediction:
         prediction_summary = run_prediction_evaluation(args.data_root, args.output_dir)
 
-    # --- 4. Final comparison ---
+    # --- 3. Final comparison ---
     ablation_results_file = os.path.join(args.output_dir, "ablation_results.json")
-    generate_final_comparison(ablation_results_file, botsort_metrics, args.output_dir)
+    generate_final_comparison(ablation_results_file, args.output_dir)
 
     # Save all results
     all_results = {
-        "botsort": botsort_metrics,
         "prediction": prediction_summary,
     }
     with open(os.path.join(args.output_dir, "full_results.json"), "w") as f:

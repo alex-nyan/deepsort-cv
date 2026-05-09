@@ -29,11 +29,10 @@ accel-deepsort/
 ├── configs/
 │   └── defaults.yaml                 # All hyperparameters
 ├── scripts/
-│   ├── run_all.py                    # Full pipeline: detections → ablation → prediction → BoT-SORT
+│   ├── run_all.py                    # Full pipeline: detections → ablation → prediction
 │   ├── run_tracker.py                # Run one tracker config on one sequence
 │   ├── run_ablation.py               # Four-way ablation driver (+ regime analysis)
 │   ├── run_full_evaluation.py        # Alternative pipeline entry point
-│   ├── run_botsort_baseline.py       # YOLOv8 + BoT-SORT external baseline
 │   ├── run_ca_sensitivity.py         # CA process-noise sweep (σ_acc sensitivity)
 │   ├── evaluate_prediction.py        # KF open-loop prediction accuracy (CV vs CA)
 │   └── generate_results_figures.py   # All paper figures + statistical tests
@@ -54,7 +53,7 @@ accel-deepsort/
 ## Prerequisites
 
 - **Python 3.10+** (tested with 3.14)
-- **GPU recommended** for YOLOv8 detection generation and BoT-SORT (CPU works but is slow)
+- **GPU recommended** for YOLOv8 detection generation (CPU works but is slow)
 
 ## Setup
 
@@ -78,7 +77,7 @@ pip install -r requirements.txt
 | opencv-python | ≥4.8 | ECC registration, image I/O |
 | torch | ≥2.0 | Backend for YOLOv8 |
 | torchvision | ≥0.15 | Backend for YOLOv8 |
-| ultralytics | ≥8.0 | YOLOv8 detection + BoT-SORT baseline |
+| ultralytics | ≥8.0 | YOLOv8 detection generation |
 | motmetrics | ≥1.4 | MOTChallenge metrics (MOTA, IDF1, IDS) |
 | PyYAML | ≥6.0 | Config loading |
 | tqdm | ≥4.65 | Progress bars |
@@ -142,9 +141,9 @@ This creates `soccernet_data/tracking/train/` (57 sequences). SoccerNet provides
 
 ## Reproducing All Results
 
-The full replication pipeline consists of 7 steps. Steps 1–4 are the primary experiments; steps 5–7 produce figures, tables, and statistical tests for the paper.
+The full replication pipeline consists of 6 steps. Steps 1–3 are the primary experiments; steps 4–6 produce figures, tables, and statistical tests for the paper.
 
-### Step 1: SportsMOT Evaluation (four-way ablation + prediction + BoT-SORT)
+### Step 1: SportsMOT Evaluation (four-way ablation + prediction)
 
 Runs the complete pipeline on SportsMOT soccer (train + val, 30 sequences):
 
@@ -157,27 +156,25 @@ python scripts/run_all.py \
     --yolo_model yolov8x.pt
 ```
 
-This executes 5 sub-steps automatically:
+This executes 4 sub-steps automatically:
 1. **Detection generation** — creates `det/det.txt` for any sequence missing one (YOLOv8x, conf=0.3, 1280px)
 2. **Four-way ablation** — runs Baseline, Accel-only, CMC-only, Full on all sequences
 3. **Regime analysis** — classifies IDS by cause (acceleration event, camera pan, both, neither)
 4. **KF prediction evaluation** — compares CV (8D) vs CA (12D) open-loop prediction at horizons 1/5/10/15/20 frames
-5. **BoT-SORT baseline** — runs YOLOv8 + BoT-SORT on all sequences
 
 **Outputs:**
 - `results/soccer_eval/ablation_results.json` — per-sequence metrics for all 4 configs
 - `results/soccer_eval/prediction_results.json` — CV vs CA prediction errors
-- `results/soccer_eval/all_results.json` — combined results including BoT-SORT
+- `results/soccer_eval/all_results.json` — combined prediction summary
 
 **Skip flags** (for partial re-runs):
 ```bash
 --skip_detections    # det/det.txt files already exist
 --skip_ablation      # skip four-way ablation
 --skip_prediction    # skip KF prediction evaluation
---skip_botsort       # skip BoT-SORT baseline
 ```
 
-**Expected runtime:** ~4–8 hours on a modern GPU (mostly detection generation and BoT-SORT).
+**Expected runtime:** ~2–6 hours on a modern GPU (mostly detection generation).
 
 ### Step 2: SoccerNet Evaluation (four-way ablation + prediction)
 
@@ -189,11 +186,10 @@ python scripts/run_all.py \
     --data_root soccernet_data/tracking \
     --output_dir results/soccernet_eval \
     --splits train \
-    --skip_detections \
-    --skip_botsort
+    --skip_detections
 ```
 
-We skip detection generation (SoccerNet provides detections) and BoT-SORT (run separately in Step 3 if desired).
+We skip detection generation (SoccerNet provides detections).
 
 **Outputs:**
 - `results/soccernet_eval/ablation_results.json`
@@ -202,27 +198,7 @@ We skip detection generation (SoccerNet provides detections) and BoT-SORT (run s
 
 **Expected runtime:** ~2–4 hours (tracking only, no detection generation).
 
-### Step 3: SoccerNet BoT-SORT Baseline (optional)
-
-Run BoT-SORT separately on SoccerNet if you want the external baseline:
-
-```bash
-python scripts/run_all.py \
-    --config configs/defaults.yaml \
-    --data_root soccernet_data/tracking \
-    --output_dir results/soccernet_eval_with_botsort \
-    --splits train \
-    --skip_detections \
-    --skip_prediction \
-    --yolo_model yolov8x.pt
-```
-
-**Note:** BoT-SORT uses its own end-to-end YOLOv8 detections (not the dataset-provided `det.txt`), making it a strong but not directly apples-to-apples comparison: it benefits from Re-ID and different detections. BoT-SORT on SoccerNet is very slow (~16 hours) due to ECC computation within Ultralytics.
-
-**Outputs:**
-- `results/soccernet_eval_with_botsort/botsort_results.json`
-
-### Step 4: CA Process-Noise Sensitivity Sweep
+### Step 3: CA Process-Noise Sensitivity Sweep
 
 Sweeps the acceleration process-noise parameter σ_acc with ECC enabled on SoccerNet, demonstrating that the Full-config regression is a tuning artifact:
 
@@ -242,9 +218,9 @@ This runs 4 full evaluations over 57 sequences (1× CMC-only reference + 3× CA+
 
 **Expected runtime:** ~3–6 hours.
 
-### Step 5: Generate Paper Figures
+### Step 4: Generate Paper Figures
 
-Once Steps 1–4 are complete, generate all publication figures and statistical tests:
+Once Steps 1–3 are complete, generate all publication figures and statistical tests:
 
 ```bash
 python scripts/generate_results_figures.py
@@ -263,7 +239,7 @@ python scripts/generate_results_figures.py
 | `fig5_per_sequence_boxplots.png` | Per-sequence metric distributions (box plots) |
 | `significance_tests.json` | Paired Wilcoxon signed-rank test p-values |
 
-### Step 6: Compile LaTeX Report
+### Step 5: Compile LaTeX Report
 
 The experiments section and all figure/table references are in:
 
@@ -278,7 +254,7 @@ To compile, ensure your figures are accessible and run:
 pdflatex cvpr_results_figures.tex
 ```
 
-### Step 7: Verify Results
+### Step 6: Verify Results
 
 Check that all expected output files exist:
 
@@ -329,14 +305,6 @@ python scripts/run_ablation.py \
 ```bash
 python scripts/evaluate_prediction.py \
     --gt_file soccer/train/v_1yHWGw8DH4A_c029/gt/gt.txt
-```
-
-### BoT-SORT Baseline Only
-
-```bash
-python scripts/run_botsort_baseline.py \
-    --data_root soccer/train \
-    --model yolov8x.pt
 ```
 
 ### Detection Generation Only
@@ -405,7 +373,6 @@ python scripts/run_all.py \
     --data_root soccer \
     --output_dir results/quick_test \
     --splits val \
-    --skip_botsort \
     --skip_detections
 
 # Generate figures from existing full results
@@ -418,6 +385,5 @@ python scripts/generate_results_figures.py
 |-------|----------|
 | `ModuleNotFoundError: No module named 'numpy'` | Make sure you activated the venv: `source .venv/bin/activate` |
 | ECC convergence warnings | Normal for shot changes; the code falls back to identity warp |
-| BoT-SORT extremely slow on SoccerNet | Expected (~16h); the Ultralytics tracker runs its own ECC per frame |
 | `det/det.txt` missing | Run `python tools/generate_detections.py --data_root <path>` |
 | CUDA out of memory | Use a smaller YOLO model: `--yolo_model yolov8m.pt` |
